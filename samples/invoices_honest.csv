@@ -1,0 +1,1201 @@
+date;vendor;category;amount
+2025-03-18;Pinemark Services;rent;62.84
+2025-12-13;Kestrel Software;telecom;16.91
+2025-02-27;Kestrel Software;training;4.55
+2025-10-04;Harbor Logistics;telecom;56.28
+2025-10-12;Copperfield Repairs;software;2725.02
+2025-02-24;Atlas Freight;telecom;100603.25
+2025-01-14;Delta Facilities;software;2726.95
+2025-02-12;Granite Works Ltd;rent;3620.51
+2025-09-13;Atlas Freight;software;5091.39
+2025-07-05;Kestrel Software;stationery;52.12
+2025-05-18;Northwind Supplies;training;413.70
+2025-04-13;Beacon Print Co;repairs;5598.55
+2025-12-01;Pinemark Services;advertising;1316.68
+2025-03-14;Atlas Freight;stationery;26742.21
+2025-02-03;Kestrel Software;rent;1888.87
+2025-12-22;Granite Works Ltd;telecom;4863.15
+2025-02-25;Harbor Logistics;rent;38.04
+2025-07-26;Copperfield Repairs;telecom;1921.20
+2025-06-16;Beacon Print Co;logistics;1398.72
+2025-01-14;Delta Facilities;advertising;75.76
+2025-08-05;Copperfield Repairs;repairs;507.77
+2025-11-29;Pinemark Services;stationery;9.50
+2025-10-24;Pinemark Services;repairs;5734.19
+2025-06-23;Atlas Freight;training;1750.87
+2025-08-14;Northwind Supplies;rent;9709.90
+2025-09-24;Larkspur Media;training;285.88
+2025-11-23;Beacon Print Co;travel;0.44
+2025-08-10;Larkspur Media;advertising;4.07
+2025-11-28;Harbor Logistics;logistics;164.53
+2025-04-16;Larkspur Media;repairs;1733.61
+2025-08-11;Beacon Print Co;repairs;23453.70
+2025-02-13;Kestrel Software;logistics;576.76
+2025-08-01;Beacon Print Co;advertising;8.80
+2025-03-24;Atlas Freight;repairs;41.23
+2025-02-27;Beacon Print Co;rent;1152.69
+2025-07-13;Larkspur Media;training;1997.31
+2025-05-02;Delta Facilities;software;14.46
+2025-09-16;Northwind Supplies;travel;1145.00
+2025-02-06;Kestrel Software;telecom;7618.89
+2025-07-06;Beacon Print Co;travel;4326.41
+2025-11-06;Beacon Print Co;advertising;104.75
+2025-03-10;Harbor Logistics;advertising;90.20
+2025-05-22;Copperfield Repairs;rent;283.80
+2025-04-05;Beacon Print Co;telecom;75.85
+2025-05-20;Harbor Logistics;repairs;2023.90
+2025-10-02;Pinemark Services;stationery;18.19
+2025-08-19;Delta Facilities;software;20.62
+2025-11-30;Larkspur Media;software;3186.81
+2025-06-05;Delta Facilities;rent;8462.51
+2025-01-12;Northwind Supplies;training;597.94
+2025-08-03;Larkspur Media;telecom;3276.87
+2025-08-14;Larkspur Media;advertising;1096.46
+2025-03-27;Atlas Freight;software;155.09
+2025-03-02;Harbor Logistics;training;581.29
+2025-04-26;Beacon Print Co;advertising;34370.49
+2025-06-22;Granite Works Ltd;repairs;469.36
+2025-04-14;Larkspur Media;rent;250.43
+2025-07-25;Copperfield Repairs;stationery;12168.25
+2025-09-22;Kestrel Software;software;6.02
+2025-10-20;Kestrel Software;stationery;2037.07
+2025-08-20;Copperfield Repairs;software;193.85
+2025-09-07;Atlas Freight;advertising;77.03
+2025-02-23;Granite Works Ltd;software;131.47
+2025-03-25;Larkspur Media;telecom;14821.33
+2025-05-14;Harbor Logistics;travel;9367.44
+2025-08-08;Delta Facilities;stationery;616.68
+2025-12-06;Granite Works Ltd;stationery;78.15
+2025-03-11;Larkspur Media;travel;1159.07
+2025-05-29;Larkspur Media;repairs;257.82
+2025-12-09;Larkspur Media;software;477.72
+2025-08-14;Pinemark Services;stationery;1394.45
+2025-05-25;Beacon Print Co;repairs;1433.36
+2025-01-02;Harbor Logistics;logistics;763.19
+2025-07-27;Kestrel Software;stationery;19489.35
+2025-12-18;Granite Works Ltd;telecom;3817.54
+2025-06-13;Copperfield Repairs;training;1106.20
+2025-12-03;Beacon Print Co;telecom;147.22
+2025-06-27;Harbor Logistics;logistics;6575.87
+2025-10-18;Northwind Supplies;repairs;79.15
+2025-01-23;Pinemark Services;travel;385.05
+2025-06-28;Delta Facilities;telecom;7.85
+2025-09-10;Beacon Print Co;advertising;634.53
+2025-10-10;Harbor Logistics;training;1805.02
+2025-03-25;Pinemark Services;rent;1591.49
+2025-01-28;Harbor Logistics;software;501.29
+2025-01-29;Atlas Freight;training;108.79
+2025-05-13;Atlas Freight;rent;64.79
+2025-08-31;Beacon Print Co;logistics;0.96
+2025-07-26;Kestrel Software;travel;140.68
+2025-10-05;Copperfield Repairs;rent;1505.13
+2025-04-17;Atlas Freight;advertising;86.20
+2025-05-21;Larkspur Media;software;8036.79
+2025-08-13;Beacon Print Co;training;39560.14
+2025-04-06;Beacon Print Co;rent;4.66
+2025-06-08;Pinemark Services;rent;3439.10
+2025-08-26;Northwind Supplies;travel;827.67
+2025-02-28;Pinemark Services;rent;147.50
+2025-09-05;Harbor Logistics;software;10.29
+2025-09-07;Kestrel Software;training;27626.24
+2025-03-29;Larkspur Media;repairs;779.60
+2025-10-08;Delta Facilities;travel;108523.07
+2025-08-27;Atlas Freight;training;751.32
+2025-10-21;Granite Works Ltd;training;1011.34
+2025-03-28;Harbor Logistics;advertising;105.75
+2025-03-18;Beacon Print Co;travel;150.65
+2025-06-21;Atlas Freight;telecom;157.70
+2025-12-02;Granite Works Ltd;stationery;2143.85
+2025-11-03;Harbor Logistics;logistics;999.84
+2025-02-18;Harbor Logistics;stationery;172.59
+2025-10-16;Kestrel Software;repairs;120704.00
+2025-11-30;Copperfield Repairs;training;6539.97
+2025-11-15;Kestrel Software;rent;4283.83
+2025-03-02;Northwind Supplies;repairs;249.21
+2025-09-23;Kestrel Software;travel;43.27
+2025-02-28;Pinemark Services;stationery;7.18
+2025-09-06;Atlas Freight;advertising;15.21
+2025-06-23;Atlas Freight;repairs;9610.53
+2025-04-02;Harbor Logistics;training;97.64
+2025-08-11;Larkspur Media;stationery;458.32
+2025-06-21;Northwind Supplies;advertising;1072.99
+2025-05-24;Larkspur Media;stationery;56234.59
+2025-01-04;Beacon Print Co;repairs;328.97
+2025-08-28;Delta Facilities;telecom;2617.32
+2025-05-12;Atlas Freight;logistics;9297.15
+2025-02-05;Delta Facilities;stationery;730.80
+2025-08-29;Copperfield Repairs;repairs;13.27
+2025-02-14;Copperfield Repairs;stationery;143.67
+2025-01-15;Larkspur Media;rent;16033.09
+2025-12-24;Atlas Freight;advertising;291.50
+2025-11-23;Northwind Supplies;logistics;21405.00
+2025-10-23;Beacon Print Co;logistics;2260.36
+2025-08-17;Northwind Supplies;repairs;1441.74
+2025-03-26;Northwind Supplies;telecom;60.44
+2025-04-14;Copperfield Repairs;repairs;1360.77
+2025-11-18;Northwind Supplies;rent;1114.78
+2025-01-04;Copperfield Repairs;travel;8131.23
+2025-08-31;Copperfield Repairs;repairs;243.75
+2025-07-15;Delta Facilities;rent;17648.94
+2025-05-30;Kestrel Software;advertising;70.29
+2025-03-18;Harbor Logistics;logistics;1358.07
+2025-12-24;Beacon Print Co;stationery;369.73
+2025-08-18;Beacon Print Co;stationery;1045.54
+2025-08-17;Granite Works Ltd;advertising;23985.91
+2025-09-14;Harbor Logistics;stationery;15.16
+2025-02-23;Delta Facilities;rent;74.71
+2025-06-13;Granite Works Ltd;advertising;6.89
+2025-06-01;Kestrel Software;rent;38801.27
+2025-07-21;Granite Works Ltd;advertising;245.77
+2025-04-27;Northwind Supplies;logistics;1150.93
+2025-05-17;Copperfield Repairs;rent;4352.68
+2025-09-15;Copperfield Repairs;telecom;1429.69
+2025-01-22;Northwind Supplies;rent;35166.34
+2025-08-02;Harbor Logistics;advertising;634.83
+2025-12-04;Delta Facilities;telecom;975.42
+2025-02-13;Kestrel Software;logistics;2979.07
+2025-10-25;Kestrel Software;stationery;1113.38
+2025-03-25;Pinemark Services;travel;1055.52
+2025-06-20;Harbor Logistics;logistics;1593.03
+2025-06-07;Atlas Freight;software;39.24
+2025-12-25;Larkspur Media;software;91.23
+2025-03-27;Pinemark Services;logistics;7293.10
+2025-10-19;Harbor Logistics;rent;9552.48
+2025-09-19;Copperfield Repairs;logistics;5.45
+2025-07-15;Granite Works Ltd;telecom;193.74
+2025-04-29;Larkspur Media;travel;123.97
+2025-11-28;Kestrel Software;stationery;6.39
+2025-12-17;Northwind Supplies;rent;29536.70
+2025-02-20;Kestrel Software;travel;163.26
+2025-02-09;Larkspur Media;repairs;4909.13
+2025-05-05;Beacon Print Co;repairs;144.32
+2025-09-16;Northwind Supplies;rent;4633.04
+2025-08-26;Harbor Logistics;stationery;1197.06
+2025-10-10;Northwind Supplies;stationery;42.66
+2025-01-27;Copperfield Repairs;telecom;742.18
+2025-08-25;Larkspur Media;rent;79.45
+2025-10-07;Delta Facilities;advertising;8446.20
+2025-09-13;Atlas Freight;rent;8047.16
+2025-06-29;Beacon Print Co;logistics;14658.46
+2025-08-23;Delta Facilities;travel;54.60
+2025-04-28;Northwind Supplies;software;129.37
+2025-02-05;Northwind Supplies;telecom;7279.80
+2025-03-12;Atlas Freight;travel;57.79
+2025-11-23;Kestrel Software;repairs;155.86
+2025-11-14;Larkspur Media;repairs;527.47
+2025-12-19;Beacon Print Co;repairs;15442.10
+2025-01-30;Larkspur Media;stationery;715.16
+2025-07-02;Atlas Freight;rent;337.07
+2025-06-08;Copperfield Repairs;training;708.92
+2025-01-30;Delta Facilities;software;208.32
+2025-07-12;Larkspur Media;software;11386.96
+2025-05-13;Atlas Freight;logistics;32.54
+2025-10-22;Copperfield Repairs;telecom;171431.98
+2025-01-06;Granite Works Ltd;repairs;19.13
+2025-04-24;Delta Facilities;logistics;1064.27
+2025-04-09;Northwind Supplies;repairs;130.34
+2025-12-10;Larkspur Media;training;20.12
+2025-10-17;Northwind Supplies;rent;19280.17
+2025-06-17;Pinemark Services;software;176962.54
+2025-07-30;Kestrel Software;telecom;717.82
+2025-07-04;Atlas Freight;advertising;52.19
+2025-04-27;Granite Works Ltd;logistics;95140.65
+2025-06-01;Northwind Supplies;software;93.87
+2025-01-24;Northwind Supplies;advertising;13034.85
+2025-05-12;Northwind Supplies;repairs;125760.59
+2025-12-07;Granite Works Ltd;logistics;2250.24
+2025-09-08;Kestrel Software;stationery;29.35
+2025-05-15;Pinemark Services;travel;1275.57
+2025-04-22;Pinemark Services;telecom;83.36
+2025-07-08;Kestrel Software;stationery;8871.67
+2025-10-07;Larkspur Media;rent;2567.90
+2025-01-22;Pinemark Services;software;1109.93
+2025-12-13;Granite Works Ltd;software;3636.60
+2025-12-29;Harbor Logistics;rent;1610.01
+2025-05-25;Atlas Freight;repairs;85.55
+2025-05-19;Larkspur Media;travel;751.05
+2025-05-07;Copperfield Repairs;telecom;337.26
+2025-05-17;Beacon Print Co;travel;6673.82
+2025-04-16;Kestrel Software;logistics;494.02
+2025-04-18;Pinemark Services;software;356.12
+2025-01-30;Delta Facilities;advertising;303.70
+2025-05-31;Northwind Supplies;stationery;3717.83
+2025-04-20;Northwind Supplies;software;355.64
+2025-12-22;Northwind Supplies;telecom;27.67
+2025-06-22;Pinemark Services;logistics;74320.70
+2025-11-09;Pinemark Services;telecom;28464.45
+2025-09-26;Pinemark Services;travel;1370.82
+2025-08-26;Copperfield Repairs;stationery;432.59
+2025-07-26;Northwind Supplies;telecom;70.15
+2025-12-08;Delta Facilities;software;313.32
+2025-08-26;Larkspur Media;software;14.09
+2025-05-13;Harbor Logistics;training;497.65
+2025-10-28;Larkspur Media;telecom;448.01
+2025-11-07;Atlas Freight;training;68.30
+2025-01-31;Pinemark Services;telecom;141.11
+2025-08-06;Beacon Print Co;advertising;38848.48
+2025-04-09;Larkspur Media;advertising;1341.66
+2025-06-11;Northwind Supplies;training;1277.56
+2025-04-20;Northwind Supplies;travel;257.05
+2025-07-06;Delta Facilities;telecom;32.07
+2025-05-12;Larkspur Media;software;902.99
+2025-07-05;Delta Facilities;advertising;2298.97
+2025-08-17;Pinemark Services;stationery;596.87
+2025-08-17;Pinemark Services;stationery;92.77
+2025-09-29;Kestrel Software;repairs;46.56
+2025-12-19;Kestrel Software;telecom;28.75
+2025-09-22;Copperfield Repairs;repairs;2343.67
+2025-06-11;Copperfield Repairs;software;27.16
+2025-06-25;Larkspur Media;telecom;9695.40
+2025-11-06;Beacon Print Co;software;750.82
+2025-05-25;Larkspur Media;rent;66887.04
+2025-07-30;Granite Works Ltd;travel;222.59
+2025-09-04;Delta Facilities;repairs;13.91
+2025-08-20;Kestrel Software;advertising;5601.78
+2025-06-28;Granite Works Ltd;stationery;162.88
+2025-01-09;Kestrel Software;telecom;11236.94
+2025-02-06;Pinemark Services;software;3259.84
+2025-06-10;Larkspur Media;travel;126.01
+2025-05-11;Harbor Logistics;repairs;59.65
+2025-05-18;Northwind Supplies;rent;9.03
+2025-03-02;Delta Facilities;travel;68926.65
+2025-03-05;Harbor Logistics;stationery;25722.99
+2025-03-21;Copperfield Repairs;rent;25484.92
+2025-04-26;Beacon Print Co;software;2226.28
+2025-03-12;Northwind Supplies;software;918.90
+2025-09-14;Copperfield Repairs;repairs;114.70
+2025-07-05;Harbor Logistics;travel;125.77
+2025-10-27;Kestrel Software;travel;33.63
+2025-10-31;Delta Facilities;repairs;3537.71
+2025-12-21;Delta Facilities;training;2.29
+2025-04-05;Granite Works Ltd;rent;17.17
+2025-01-23;Beacon Print Co;travel;9.00
+2025-03-15;Harbor Logistics;repairs;309.69
+2025-02-12;Atlas Freight;stationery;5902.31
+2025-04-07;Larkspur Media;repairs;627.33
+2025-03-24;Kestrel Software;travel;447.81
+2025-01-23;Delta Facilities;rent;287.93
+2025-01-25;Northwind Supplies;rent;33.49
+2025-03-01;Larkspur Media;telecom;437.39
+2025-08-21;Copperfield Repairs;training;74.88
+2025-06-12;Kestrel Software;rent;22.49
+2025-09-13;Copperfield Repairs;repairs;5896.09
+2025-07-09;Kestrel Software;logistics;370.75
+2025-08-04;Copperfield Repairs;stationery;53.76
+2025-05-25;Copperfield Repairs;advertising;312205.11
+2025-10-13;Beacon Print Co;stationery;638.90
+2025-05-20;Pinemark Services;travel;24.28
+2025-03-25;Northwind Supplies;software;958.31
+2025-05-08;Atlas Freight;software;6140.92
+2025-01-30;Copperfield Repairs;software;136.86
+2025-10-01;Pinemark Services;training;725.38
+2025-07-25;Copperfield Repairs;stationery;6121.40
+2025-12-07;Copperfield Repairs;software;5276.72
+2025-10-23;Atlas Freight;logistics;544.50
+2025-09-04;Pinemark Services;telecom;22221.73
+2025-10-22;Granite Works Ltd;advertising;690.07
+2025-05-07;Atlas Freight;software;119.27
+2025-03-19;Copperfield Repairs;stationery;251737.41
+2025-12-15;Larkspur Media;repairs;69.01
+2025-10-19;Delta Facilities;training;1000.57
+2025-06-03;Copperfield Repairs;repairs;99.18
+2025-10-13;Copperfield Repairs;software;11197.92
+2025-01-31;Granite Works Ltd;stationery;25305.21
+2025-07-15;Kestrel Software;telecom;82306.17
+2025-01-01;Beacon Print Co;logistics;12968.24
+2025-05-10;Pinemark Services;travel;175.94
+2025-04-05;Beacon Print Co;training;223.80
+2025-09-29;Kestrel Software;software;274.96
+2025-03-02;Beacon Print Co;rent;2909.42
+2025-07-20;Harbor Logistics;rent;196.09
+2025-04-12;Harbor Logistics;logistics;119.96
+2025-11-11;Pinemark Services;rent;2664.48
+2025-10-21;Harbor Logistics;software;482.97
+2025-07-24;Copperfield Repairs;rent;64.74
+2025-02-08;Atlas Freight;rent;17606.78
+2025-03-17;Atlas Freight;training;1254.58
+2025-08-24;Kestrel Software;advertising;4554.60
+2025-04-15;Granite Works Ltd;travel;9749.56
+2025-05-17;Granite Works Ltd;repairs;7592.61
+2025-10-10;Kestrel Software;logistics;455.35
+2025-04-02;Atlas Freight;repairs;18.18
+2025-12-19;Granite Works Ltd;software;1730.94
+2025-06-27;Granite Works Ltd;rent;2612.44
+2025-10-09;Kestrel Software;training;20.57
+2025-10-13;Atlas Freight;training;1.23
+2025-11-11;Harbor Logistics;rent;48.45
+2025-05-24;Beacon Print Co;logistics;80.15
+2025-09-06;Larkspur Media;travel;815.92
+2025-04-02;Copperfield Repairs;telecom;17117.17
+2025-12-25;Larkspur Media;stationery;150.74
+2025-12-18;Atlas Freight;telecom;435.35
+2025-07-04;Northwind Supplies;repairs;18449.89
+2025-10-11;Pinemark Services;rent;32.68
+2025-05-26;Delta Facilities;software;14.68
+2025-01-21;Granite Works Ltd;stationery;3020.20
+2025-04-20;Copperfield Repairs;repairs;935.65
+2025-09-21;Kestrel Software;rent;95886.29
+2025-02-09;Beacon Print Co;telecom;3.01
+2025-06-03;Northwind Supplies;repairs;621.13
+2025-09-16;Copperfield Repairs;repairs;193.84
+2025-07-11;Copperfield Repairs;telecom;54.84
+2025-04-29;Kestrel Software;advertising;21551.97
+2025-01-28;Kestrel Software;travel;4045.34
+2025-09-14;Northwind Supplies;software;8.35
+2025-12-29;Northwind Supplies;rent;54.06
+2025-11-28;Harbor Logistics;software;363.42
+2025-06-01;Granite Works Ltd;travel;253.34
+2025-10-05;Northwind Supplies;logistics;818.91
+2025-03-14;Delta Facilities;rent;1604.81
+2025-07-04;Pinemark Services;software;452.77
+2025-04-07;Atlas Freight;software;25.57
+2025-08-17;Pinemark Services;telecom;99.80
+2025-08-26;Copperfield Repairs;training;167.02
+2025-01-07;Granite Works Ltd;software;213.46
+2025-06-21;Atlas Freight;stationery;123.72
+2025-06-24;Larkspur Media;software;1.32
+2025-01-25;Delta Facilities;telecom;1362.76
+2025-05-30;Delta Facilities;travel;10852.66
+2025-06-02;Copperfield Repairs;telecom;112.25
+2025-06-09;Atlas Freight;training;1.51
+2025-05-13;Harbor Logistics;logistics;37.72
+2025-11-03;Delta Facilities;travel;5000.43
+2025-12-31;Kestrel Software;stationery;12.97
+2025-06-07;Beacon Print Co;software;5098.34
+2025-12-16;Pinemark Services;advertising;233.05
+2025-03-30;Granite Works Ltd;software;777.27
+2025-11-05;Harbor Logistics;travel;9644.48
+2025-12-29;Granite Works Ltd;software;143.91
+2025-08-21;Harbor Logistics;stationery;441.30
+2025-08-13;Larkspur Media;training;2055.22
+2025-04-23;Atlas Freight;training;593.66
+2025-04-21;Northwind Supplies;rent;226.96
+2025-09-14;Beacon Print Co;training;79.48
+2025-06-27;Larkspur Media;travel;26.75
+2025-01-13;Granite Works Ltd;travel;221.27
+2025-07-11;Larkspur Media;repairs;274.23
+2025-04-03;Copperfield Repairs;travel;150.04
+2025-09-17;Harbor Logistics;rent;851.83
+2025-09-20;Harbor Logistics;travel;141.57
+2025-04-13;Atlas Freight;repairs;65836.39
+2025-05-06;Beacon Print Co;software;1513.14
+2025-11-23;Pinemark Services;rent;274.59
+2025-02-18;Larkspur Media;software;1971.72
+2025-06-11;Kestrel Software;logistics;119.25
+2025-06-06;Copperfield Repairs;logistics;341.97
+2025-04-05;Harbor Logistics;travel;6515.24
+2025-04-28;Copperfield Repairs;advertising;158.07
+2025-05-19;Larkspur Media;repairs;5282802.71
+2025-01-20;Copperfield Repairs;stationery;11541.40
+2025-03-13;Harbor Logistics;travel;5607.45
+2025-12-06;Kestrel Software;advertising;35.66
+2025-09-18;Larkspur Media;advertising;13.45
+2025-11-21;Harbor Logistics;rent;305.17
+2025-12-15;Pinemark Services;repairs;125.26
+2025-01-11;Larkspur Media;stationery;2954.88
+2025-04-22;Northwind Supplies;stationery;54.24
+2025-03-24;Copperfield Repairs;stationery;36907.59
+2025-03-03;Delta Facilities;logistics;2.34
+2025-09-10;Pinemark Services;rent;45.50
+2025-02-09;Copperfield Repairs;software;1.76
+2025-02-21;Kestrel Software;repairs;947.85
+2025-10-03;Copperfield Repairs;repairs;28.87
+2025-12-16;Granite Works Ltd;repairs;33829.58
+2025-05-17;Larkspur Media;travel;5126.84
+2025-03-15;Beacon Print Co;logistics;53.20
+2025-02-17;Kestrel Software;training;3026.51
+2025-03-30;Larkspur Media;software;8335.19
+2025-08-13;Harbor Logistics;rent;6.65
+2025-05-03;Beacon Print Co;repairs;7.21
+2025-10-29;Larkspur Media;rent;27.08
+2025-08-19;Kestrel Software;training;482213.44
+2025-05-12;Beacon Print Co;training;242.05
+2025-12-24;Copperfield Repairs;travel;4.10
+2025-05-05;Pinemark Services;rent;147.53
+2025-06-28;Larkspur Media;software;1942.48
+2025-07-10;Beacon Print Co;rent;8101.83
+2025-09-22;Atlas Freight;repairs;2479.38
+2025-12-23;Pinemark Services;repairs;15395.21
+2025-01-28;Harbor Logistics;repairs;15.68
+2025-10-22;Harbor Logistics;logistics;3.70
+2025-12-23;Harbor Logistics;repairs;51.79
+2025-05-25;Granite Works Ltd;telecom;335.41
+2025-08-06;Atlas Freight;advertising;4.72
+2025-03-12;Delta Facilities;training;47.73
+2025-04-27;Kestrel Software;logistics;586.27
+2025-06-16;Kestrel Software;advertising;454.60
+2025-07-03;Copperfield Repairs;advertising;457.17
+2025-12-03;Atlas Freight;repairs;279.14
+2025-01-19;Kestrel Software;rent;2401.56
+2025-03-04;Copperfield Repairs;travel;4636.90
+2025-09-17;Delta Facilities;software;43.01
+2025-04-14;Harbor Logistics;repairs;628.59
+2025-07-15;Atlas Freight;telecom;16.76
+2025-08-20;Beacon Print Co;advertising;55.61
+2025-01-24;Atlas Freight;logistics;144310.29
+2025-02-04;Larkspur Media;stationery;15190.64
+2025-10-11;Northwind Supplies;rent;182.61
+2025-01-25;Northwind Supplies;travel;705.58
+2025-12-09;Larkspur Media;telecom;3470.10
+2025-12-25;Pinemark Services;stationery;20.03
+2025-02-07;Northwind Supplies;travel;77.44
+2025-12-25;Kestrel Software;rent;0.96
+2025-07-21;Atlas Freight;travel;57703.10
+2025-04-27;Delta Facilities;stationery;58.91
+2025-01-18;Larkspur Media;telecom;8422.81
+2025-05-13;Northwind Supplies;rent;852.07
+2025-05-04;Harbor Logistics;telecom;70.25
+2025-07-28;Larkspur Media;software;5517.49
+2025-04-16;Atlas Freight;telecom;5221.65
+2025-09-11;Pinemark Services;repairs;617.17
+2025-01-14;Larkspur Media;telecom;154.75
+2025-11-22;Harbor Logistics;logistics;49.70
+2025-08-04;Copperfield Repairs;software;73.52
+2025-09-24;Copperfield Repairs;repairs;666.31
+2025-07-09;Kestrel Software;telecom;30.78
+2025-07-08;Larkspur Media;software;118.38
+2025-01-13;Granite Works Ltd;software;8130.52
+2025-06-16;Granite Works Ltd;rent;16.73
+2025-10-21;Northwind Supplies;training;206.55
+2025-12-14;Atlas Freight;repairs;28.07
+2025-04-25;Granite Works Ltd;software;4898.26
+2025-09-24;Beacon Print Co;advertising;245.25
+2025-01-27;Beacon Print Co;repairs;13687.87
+2025-03-21;Delta Facilities;logistics;126.76
+2025-07-31;Northwind Supplies;advertising;33.00
+2025-03-11;Copperfield Repairs;logistics;107.23
+2025-01-13;Pinemark Services;telecom;64.63
+2025-10-26;Delta Facilities;travel;1.83
+2025-09-11;Pinemark Services;advertising;23.60
+2025-10-09;Delta Facilities;rent;110.19
+2025-07-16;Copperfield Repairs;stationery;3727.05
+2025-07-25;Delta Facilities;logistics;3514.13
+2025-11-16;Harbor Logistics;repairs;1872.15
+2025-08-20;Beacon Print Co;software;485.80
+2025-02-26;Larkspur Media;training;1171.43
+2025-06-06;Delta Facilities;repairs;29641.28
+2025-05-03;Pinemark Services;rent;594.31
+2025-11-11;Pinemark Services;travel;342.37
+2025-08-05;Beacon Print Co;rent;0.97
+2025-04-16;Atlas Freight;software;5204.55
+2025-12-14;Harbor Logistics;rent;57105.21
+2025-04-06;Northwind Supplies;advertising;2293.96
+2025-08-02;Atlas Freight;travel;26.42
+2025-09-06;Granite Works Ltd;telecom;7012.01
+2025-09-18;Beacon Print Co;rent;22.57
+2025-04-10;Kestrel Software;training;1.94
+2025-09-03;Granite Works Ltd;logistics;348.96
+2025-01-09;Granite Works Ltd;software;288.36
+2025-03-29;Delta Facilities;rent;5.57
+2025-05-23;Atlas Freight;travel;1.85
+2025-11-29;Atlas Freight;advertising;81.68
+2025-03-08;Beacon Print Co;repairs;0.64
+2025-03-08;Delta Facilities;travel;1701.78
+2025-08-19;Atlas Freight;advertising;99.30
+2025-10-08;Beacon Print Co;training;60.22
+2025-03-09;Harbor Logistics;stationery;239.13
+2025-05-23;Pinemark Services;logistics;751.61
+2025-06-05;Kestrel Software;repairs;576.32
+2025-11-18;Kestrel Software;rent;3213.37
+2025-04-26;Beacon Print Co;rent;31.16
+2025-07-16;Northwind Supplies;logistics;176.14
+2025-10-28;Harbor Logistics;travel;55351.13
+2025-05-07;Harbor Logistics;logistics;168.98
+2025-09-24;Copperfield Repairs;stationery;119.88
+2025-09-01;Delta Facilities;repairs;3400.28
+2025-03-27;Granite Works Ltd;repairs;15.18
+2025-01-15;Northwind Supplies;software;7507.23
+2025-05-21;Northwind Supplies;rent;379.94
+2025-05-24;Granite Works Ltd;rent;5032.47
+2025-11-14;Granite Works Ltd;rent;1.25
+2025-06-20;Pinemark Services;telecom;190.59
+2025-04-19;Beacon Print Co;rent;3595.10
+2025-02-13;Beacon Print Co;rent;358.92
+2025-05-23;Delta Facilities;software;211.24
+2025-10-16;Pinemark Services;telecom;143.75
+2025-12-16;Northwind Supplies;logistics;490.49
+2025-03-05;Pinemark Services;repairs;12.48
+2025-07-29;Larkspur Media;telecom;183.53
+2025-10-13;Larkspur Media;repairs;191.94
+2025-08-30;Atlas Freight;repairs;488.90
+2025-08-16;Granite Works Ltd;training;822.66
+2025-01-01;Delta Facilities;telecom;39.52
+2025-04-04;Copperfield Repairs;telecom;3505.06
+2025-12-28;Pinemark Services;software;2738.56
+2025-05-18;Copperfield Repairs;stationery;97962.24
+2025-08-14;Atlas Freight;repairs;10931.62
+2025-04-08;Granite Works Ltd;travel;3033.84
+2025-02-28;Harbor Logistics;telecom;121.44
+2025-06-21;Kestrel Software;logistics;128.91
+2025-02-22;Granite Works Ltd;software;1854.02
+2025-01-02;Granite Works Ltd;advertising;4044.32
+2025-08-24;Delta Facilities;telecom;895750.16
+2025-04-03;Kestrel Software;software;255.48
+2025-01-18;Delta Facilities;software;162.02
+2025-05-13;Larkspur Media;repairs;26875.41
+2025-02-11;Northwind Supplies;advertising;430.35
+2025-09-10;Granite Works Ltd;training;920.22
+2025-09-23;Granite Works Ltd;repairs;1925.47
+2025-05-26;Northwind Supplies;stationery;7086.96
+2025-12-17;Beacon Print Co;repairs;62064.19
+2025-07-07;Northwind Supplies;repairs;10758.40
+2025-02-10;Kestrel Software;logistics;127.85
+2025-12-31;Copperfield Repairs;rent;1794.52
+2025-01-09;Kestrel Software;rent;83.37
+2025-01-20;Kestrel Software;stationery;3.34
+2025-04-11;Granite Works Ltd;repairs;246.56
+2025-08-27;Harbor Logistics;training;7.02
+2025-07-29;Atlas Freight;travel;389.95
+2025-10-28;Northwind Supplies;repairs;45.55
+2025-08-31;Pinemark Services;rent;448.01
+2025-03-13;Kestrel Software;advertising;6661.72
+2025-04-13;Granite Works Ltd;travel;1097.19
+2025-02-24;Granite Works Ltd;telecom;3276.29
+2025-11-21;Kestrel Software;travel;312.90
+2025-12-14;Kestrel Software;software;345232.08
+2025-08-17;Harbor Logistics;stationery;1475.65
+2025-09-17;Kestrel Software;repairs;313.24
+2025-12-11;Atlas Freight;rent;24.54
+2025-06-25;Copperfield Repairs;travel;593.10
+2025-11-11;Beacon Print Co;training;110.41
+2025-08-12;Copperfield Repairs;training;673.53
+2025-11-01;Pinemark Services;rent;238.31
+2025-09-17;Northwind Supplies;travel;11865.21
+2025-06-18;Atlas Freight;training;2801.04
+2025-02-11;Atlas Freight;advertising;9.86
+2025-07-25;Beacon Print Co;repairs;1945.07
+2025-10-04;Atlas Freight;stationery;531.21
+2025-05-22;Atlas Freight;stationery;16.66
+2025-04-29;Beacon Print Co;travel;6404.14
+2025-07-13;Copperfield Repairs;training;73298.35
+2025-11-23;Granite Works Ltd;travel;10965.91
+2025-09-14;Northwind Supplies;logistics;242875.06
+2025-01-29;Northwind Supplies;training;140.16
+2025-06-24;Copperfield Repairs;rent;66.68
+2025-01-28;Larkspur Media;travel;328.93
+2025-09-23;Harbor Logistics;logistics;330.18
+2025-01-25;Pinemark Services;travel;19.11
+2025-06-23;Harbor Logistics;logistics;9.40
+2025-06-19;Atlas Freight;advertising;9.73
+2025-07-23;Delta Facilities;telecom;570.48
+2025-12-31;Larkspur Media;rent;76.85
+2025-05-12;Larkspur Media;training;305.42
+2025-11-27;Pinemark Services;software;432.95
+2025-04-06;Beacon Print Co;telecom;3.39
+2025-11-23;Copperfield Repairs;training;2419.46
+2025-03-17;Beacon Print Co;training;738.21
+2025-10-30;Harbor Logistics;telecom;74.13
+2025-04-26;Delta Facilities;training;63.38
+2025-06-08;Delta Facilities;rent;882.33
+2025-01-07;Kestrel Software;logistics;81.87
+2025-07-24;Pinemark Services;stationery;971.64
+2025-07-13;Harbor Logistics;stationery;40698.05
+2025-11-01;Harbor Logistics;telecom;76.99
+2025-01-20;Copperfield Repairs;repairs;252.99
+2025-01-03;Beacon Print Co;logistics;1019.44
+2025-02-21;Northwind Supplies;rent;59.08
+2025-12-21;Atlas Freight;travel;12095.35
+2025-01-08;Pinemark Services;software;1088.05
+2025-10-26;Larkspur Media;repairs;178.84
+2025-11-23;Harbor Logistics;rent;53.13
+2025-07-14;Kestrel Software;travel;216.53
+2025-06-06;Delta Facilities;stationery;109.98
+2025-12-15;Larkspur Media;repairs;1246.11
+2025-10-24;Beacon Print Co;travel;760.72
+2025-02-13;Atlas Freight;rent;120.23
+2025-07-03;Beacon Print Co;logistics;4517.21
+2025-08-13;Beacon Print Co;telecom;5076.49
+2025-03-16;Harbor Logistics;software;5238.82
+2025-04-23;Atlas Freight;repairs;104.66
+2025-01-21;Northwind Supplies;rent;78.54
+2025-07-09;Delta Facilities;telecom;12.29
+2025-05-30;Northwind Supplies;software;42.08
+2025-12-02;Harbor Logistics;repairs;4171.17
+2025-03-01;Delta Facilities;travel;31.59
+2025-03-21;Harbor Logistics;software;377.33
+2025-02-11;Harbor Logistics;stationery;2570.36
+2025-06-12;Larkspur Media;telecom;14.84
+2025-11-20;Pinemark Services;telecom;73.21
+2025-01-23;Atlas Freight;rent;1649.94
+2025-03-10;Harbor Logistics;telecom;811.97
+2025-10-27;Granite Works Ltd;training;324.24
+2025-08-21;Northwind Supplies;stationery;2677.19
+2025-12-11;Harbor Logistics;telecom;330.33
+2025-11-01;Northwind Supplies;logistics;23.65
+2025-11-24;Harbor Logistics;advertising;139.93
+2025-08-28;Pinemark Services;training;39.27
+2025-10-06;Beacon Print Co;software;24.85
+2025-01-09;Northwind Supplies;repairs;2246.46
+2025-08-13;Pinemark Services;repairs;10.11
+2025-11-23;Beacon Print Co;training;39.35
+2025-04-17;Larkspur Media;advertising;2955.34
+2025-05-07;Kestrel Software;rent;230.10
+2025-10-01;Larkspur Media;advertising;1133.64
+2025-01-23;Northwind Supplies;advertising;0.34
+2025-06-24;Beacon Print Co;rent;774.16
+2025-10-12;Atlas Freight;telecom;1299.27
+2025-12-01;Atlas Freight;repairs;3835.19
+2025-12-22;Atlas Freight;stationery;59.80
+2025-09-24;Beacon Print Co;training;286.89
+2025-08-17;Beacon Print Co;logistics;2.33
+2025-11-06;Northwind Supplies;travel;311282.53
+2025-03-10;Northwind Supplies;stationery;33.87
+2025-06-24;Larkspur Media;travel;34277.27
+2025-11-28;Copperfield Repairs;repairs;7.70
+2025-10-17;Harbor Logistics;software;15.01
+2025-12-15;Pinemark Services;advertising;2400.98
+2025-12-04;Harbor Logistics;repairs;58.01
+2025-08-24;Atlas Freight;repairs;922.40
+2025-06-28;Pinemark Services;telecom;7223583.27
+2025-01-14;Copperfield Repairs;telecom;1096.49
+2025-12-31;Granite Works Ltd;telecom;27.83
+2025-11-16;Northwind Supplies;advertising;1292.91
+2025-09-12;Delta Facilities;logistics;10508.62
+2025-03-25;Harbor Logistics;repairs;34.57
+2025-02-28;Atlas Freight;logistics;24498.82
+2025-07-01;Kestrel Software;software;19118.03
+2025-02-09;Atlas Freight;travel;197.93
+2025-07-06;Kestrel Software;repairs;27.15
+2025-05-29;Northwind Supplies;stationery;34.00
+2025-12-27;Kestrel Software;telecom;11.74
+2025-05-12;Larkspur Media;travel;34.39
+2025-11-05;Northwind Supplies;repairs;1455.58
+2025-07-02;Pinemark Services;logistics;6.31
+2025-01-11;Delta Facilities;logistics;627.29
+2025-04-04;Delta Facilities;telecom;2109.34
+2025-08-14;Pinemark Services;training;36.09
+2025-07-15;Atlas Freight;logistics;2712.10
+2025-02-19;Beacon Print Co;repairs;362.31
+2025-07-28;Copperfield Repairs;advertising;359.33
+2025-04-18;Copperfield Repairs;logistics;65.82
+2025-02-17;Granite Works Ltd;rent;204.38
+2025-05-20;Larkspur Media;training;50.53
+2025-06-09;Pinemark Services;logistics;1235.71
+2025-01-08;Pinemark Services;rent;4959.04
+2025-12-06;Granite Works Ltd;training;7.35
+2025-01-19;Northwind Supplies;advertising;332.92
+2025-03-17;Kestrel Software;training;10.25
+2025-09-27;Granite Works Ltd;stationery;28.39
+2025-01-17;Delta Facilities;advertising;1950.47
+2025-05-24;Harbor Logistics;logistics;10165.53
+2025-02-23;Harbor Logistics;training;273.00
+2025-06-19;Granite Works Ltd;stationery;3052.83
+2025-09-24;Delta Facilities;telecom;301.21
+2025-08-01;Beacon Print Co;travel;744.75
+2025-06-03;Harbor Logistics;logistics;70.44
+2025-12-17;Copperfield Repairs;travel;58.31
+2025-05-08;Northwind Supplies;advertising;493.20
+2025-01-25;Kestrel Software;telecom;10336.67
+2025-03-18;Kestrel Software;telecom;924.52
+2025-11-22;Granite Works Ltd;logistics;452.44
+2025-10-05;Atlas Freight;telecom;1688.33
+2025-09-06;Harbor Logistics;stationery;218.75
+2025-04-10;Kestrel Software;stationery;45.78
+2025-09-17;Harbor Logistics;advertising;544.52
+2025-09-27;Larkspur Media;logistics;1293.46
+2025-10-12;Kestrel Software;repairs;12663.55
+2025-07-10;Granite Works Ltd;logistics;2957.32
+2025-05-24;Copperfield Repairs;telecom;43.63
+2025-05-16;Copperfield Repairs;rent;261.70
+2025-08-11;Larkspur Media;training;568.01
+2025-01-11;Pinemark Services;travel;354.84
+2025-06-06;Delta Facilities;travel;7391.23
+2025-04-27;Beacon Print Co;training;430.65
+2025-03-14;Granite Works Ltd;advertising;1094.59
+2025-04-28;Pinemark Services;software;162.43
+2025-02-11;Larkspur Media;software;1495.53
+2025-10-24;Kestrel Software;telecom;5.00
+2025-12-04;Northwind Supplies;repairs;35.86
+2025-11-13;Granite Works Ltd;stationery;629.27
+2025-02-03;Delta Facilities;logistics;42.77
+2025-12-20;Granite Works Ltd;software;29.99
+2025-02-14;Kestrel Software;telecom;14.45
+2025-10-08;Atlas Freight;training;404.16
+2025-09-03;Larkspur Media;stationery;119.28
+2025-02-16;Copperfield Repairs;rent;2189.01
+2025-11-24;Harbor Logistics;rent;1362.95
+2025-04-20;Atlas Freight;advertising;235.67
+2025-04-21;Pinemark Services;repairs;103.81
+2025-01-17;Northwind Supplies;telecom;64.66
+2025-08-14;Larkspur Media;travel;60.68
+2025-02-04;Harbor Logistics;logistics;1216.13
+2025-10-03;Larkspur Media;stationery;29.68
+2025-06-29;Pinemark Services;travel;219.81
+2025-06-10;Harbor Logistics;rent;70.38
+2025-08-11;Copperfield Repairs;stationery;1197.71
+2025-12-29;Northwind Supplies;travel;717678.39
+2025-01-09;Beacon Print Co;travel;959.86
+2025-01-07;Copperfield Repairs;travel;2700.17
+2025-12-05;Harbor Logistics;advertising;2584.28
+2025-08-16;Copperfield Repairs;logistics;2076.02
+2025-02-25;Harbor Logistics;repairs;2235.64
+2025-06-24;Northwind Supplies;rent;80172.20
+2025-04-18;Atlas Freight;advertising;126.41
+2025-06-16;Granite Works Ltd;stationery;1073.54
+2025-10-21;Northwind Supplies;telecom;145.47
+2025-11-18;Pinemark Services;stationery;78.24
+2025-01-10;Pinemark Services;stationery;2224.22
+2025-12-27;Atlas Freight;rent;75.44
+2025-05-11;Delta Facilities;repairs;148364.72
+2025-12-03;Northwind Supplies;logistics;1455.42
+2025-05-19;Harbor Logistics;software;1052.67
+2025-06-25;Delta Facilities;stationery;17.88
+2025-11-05;Copperfield Repairs;advertising;5433.47
+2025-05-08;Kestrel Software;travel;114.35
+2025-01-01;Pinemark Services;logistics;700.04
+2025-05-01;Granite Works Ltd;training;2896.10
+2025-12-31;Granite Works Ltd;repairs;14.63
+2025-08-22;Copperfield Repairs;logistics;395.91
+2025-11-04;Northwind Supplies;stationery;498.56
+2025-09-17;Atlas Freight;advertising;143.66
+2025-04-02;Pinemark Services;advertising;326.54
+2025-05-21;Kestrel Software;advertising;20.52
+2025-09-07;Beacon Print Co;stationery;2460.16
+2025-09-12;Granite Works Ltd;repairs;112.92
+2025-05-26;Kestrel Software;stationery;69.76
+2025-07-29;Northwind Supplies;software;337.16
+2025-08-15;Kestrel Software;training;38.05
+2025-12-04;Northwind Supplies;training;96.83
+2025-02-03;Atlas Freight;telecom;1109.54
+2025-03-23;Granite Works Ltd;logistics;13848.83
+2025-11-22;Copperfield Repairs;repairs;124.53
+2025-09-27;Kestrel Software;telecom;10502.12
+2025-12-13;Larkspur Media;repairs;497.98
+2025-09-10;Beacon Print Co;telecom;1.39
+2025-10-18;Northwind Supplies;telecom;52174.38
+2025-01-21;Delta Facilities;logistics;382.46
+2025-01-31;Copperfield Repairs;rent;3.41
+2025-02-20;Atlas Freight;logistics;11521.93
+2025-12-18;Larkspur Media;logistics;1799.72
+2025-03-04;Delta Facilities;advertising;52958.14
+2025-07-12;Harbor Logistics;travel;917.20
+2025-09-07;Harbor Logistics;travel;11529.52
+2025-10-11;Atlas Freight;advertising;172.03
+2025-12-26;Copperfield Repairs;travel;51.69
+2025-06-12;Harbor Logistics;rent;254.19
+2025-09-13;Pinemark Services;stationery;91.71
+2025-02-03;Granite Works Ltd;stationery;835.06
+2025-10-02;Delta Facilities;telecom;24.07
+2025-05-18;Delta Facilities;advertising;13847.41
+2025-02-16;Beacon Print Co;stationery;29089.89
+2025-05-21;Copperfield Repairs;advertising;254.27
+2025-12-23;Pinemark Services;logistics;305.97
+2025-08-06;Larkspur Media;training;154.06
+2025-10-09;Granite Works Ltd;training;5874.65
+2025-10-09;Beacon Print Co;advertising;146.11
+2025-08-01;Atlas Freight;repairs;5497.20
+2025-02-13;Larkspur Media;software;29734.41
+2025-12-20;Granite Works Ltd;telecom;441.79
+2025-11-04;Beacon Print Co;advertising;8.72
+2025-10-06;Larkspur Media;travel;21347.45
+2025-11-16;Granite Works Ltd;rent;1404.10
+2025-08-18;Delta Facilities;stationery;2.26
+2025-03-19;Kestrel Software;stationery;10034.00
+2025-11-24;Northwind Supplies;repairs;16.29
+2025-06-26;Northwind Supplies;software;69.80
+2025-03-27;Kestrel Software;repairs;5189.72
+2025-06-09;Granite Works Ltd;travel;18.07
+2025-11-25;Pinemark Services;repairs;331.32
+2025-06-06;Delta Facilities;advertising;484.55
+2025-12-08;Pinemark Services;telecom;663.85
+2025-02-22;Beacon Print Co;training;557.90
+2025-10-15;Kestrel Software;travel;3000.19
+2025-10-12;Larkspur Media;advertising;112.34
+2025-09-20;Granite Works Ltd;telecom;732.93
+2025-05-11;Atlas Freight;telecom;3868.68
+2025-04-12;Larkspur Media;software;682.70
+2025-05-16;Harbor Logistics;repairs;229.42
+2025-12-07;Northwind Supplies;telecom;53.97
+2025-03-25;Larkspur Media;training;70.31
+2025-06-15;Pinemark Services;software;248.17
+2025-12-30;Granite Works Ltd;rent;11.60
+2025-06-07;Harbor Logistics;telecom;534.45
+2025-02-11;Harbor Logistics;telecom;8.89
+2025-08-07;Larkspur Media;stationery;828.67
+2025-04-03;Pinemark Services;travel;43.95
+2025-06-20;Harbor Logistics;software;2182.07
+2025-04-15;Beacon Print Co;travel;98.71
+2025-10-30;Pinemark Services;logistics;2751.83
+2025-06-12;Copperfield Repairs;travel;35.55
+2025-05-30;Delta Facilities;software;376.23
+2025-09-08;Northwind Supplies;stationery;127.93
+2025-08-07;Harbor Logistics;advertising;27090.67
+2025-06-30;Harbor Logistics;telecom;38.92
+2025-06-17;Copperfield Repairs;repairs;335.70
+2025-04-23;Kestrel Software;stationery;543.17
+2025-03-08;Harbor Logistics;telecom;28.25
+2025-02-08;Northwind Supplies;travel;1943.84
+2025-12-13;Copperfield Repairs;stationery;35.99
+2025-05-08;Granite Works Ltd;rent;1641.63
+2025-06-27;Harbor Logistics;logistics;1277.86
+2025-03-15;Beacon Print Co;software;783.29
+2025-11-06;Copperfield Repairs;repairs;109262.90
+2025-03-28;Kestrel Software;travel;4237.60
+2025-04-20;Atlas Freight;software;66378.57
+2025-01-16;Granite Works Ltd;logistics;408.54
+2025-05-21;Atlas Freight;travel;20.81
+2025-12-05;Northwind Supplies;travel;194.78
+2025-03-30;Atlas Freight;logistics;187.61
+2025-07-21;Granite Works Ltd;rent;644.98
+2025-03-12;Atlas Freight;advertising;158.85
+2025-03-10;Atlas Freight;stationery;258.31
+2025-01-25;Granite Works Ltd;repairs;7.34
+2025-11-21;Harbor Logistics;training;1916.58
+2025-09-25;Granite Works Ltd;advertising;12630.93
+2025-01-28;Larkspur Media;travel;2241.47
+2025-07-20;Copperfield Repairs;logistics;6028.03
+2025-11-05;Granite Works Ltd;rent;143.43
+2025-07-14;Granite Works Ltd;logistics;959.40
+2025-10-18;Kestrel Software;training;595.44
+2025-01-18;Pinemark Services;travel;34.34
+2025-10-26;Harbor Logistics;travel;23.23
+2025-12-08;Northwind Supplies;advertising;100.13
+2025-01-04;Harbor Logistics;training;123.98
+2025-02-18;Northwind Supplies;training;199.40
+2025-01-10;Kestrel Software;telecom;219.74
+2025-04-28;Beacon Print Co;software;1.19
+2025-02-04;Harbor Logistics;telecom;16.68
+2025-03-14;Atlas Freight;advertising;61.45
+2025-03-24;Northwind Supplies;software;7.20
+2025-09-23;Delta Facilities;rent;60.94
+2025-08-09;Larkspur Media;repairs;49.50
+2025-02-02;Harbor Logistics;rent;6.85
+2025-02-18;Delta Facilities;stationery;19.77
+2025-12-08;Pinemark Services;logistics;57.46
+2025-05-10;Harbor Logistics;repairs;1412.93
+2025-07-21;Larkspur Media;stationery;30198.79
+2025-10-07;Larkspur Media;travel;421.09
+2025-07-03;Copperfield Repairs;telecom;14497.76
+2025-08-18;Copperfield Repairs;rent;357.89
+2025-09-03;Beacon Print Co;logistics;13383.23
+2025-08-28;Harbor Logistics;advertising;30.90
+2025-08-24;Larkspur Media;training;374.95
+2025-11-24;Kestrel Software;training;27.81
+2025-07-27;Granite Works Ltd;logistics;375.67
+2025-12-01;Delta Facilities;software;70.67
+2025-11-13;Pinemark Services;stationery;20.82
+2025-06-22;Beacon Print Co;stationery;30.47
+2025-04-16;Copperfield Repairs;stationery;843.54
+2025-08-07;Granite Works Ltd;rent;94.64
+2025-12-13;Atlas Freight;telecom;130.45
+2025-04-13;Delta Facilities;rent;1381.39
+2025-02-13;Kestrel Software;training;70887.81
+2025-01-09;Granite Works Ltd;training;533.92
+2025-12-10;Kestrel Software;training;2803.38
+2025-07-14;Atlas Freight;telecom;7.07
+2025-03-15;Copperfield Repairs;advertising;1930.88
+2025-01-12;Harbor Logistics;logistics;22.47
+2025-03-13;Northwind Supplies;software;760.04
+2025-04-18;Granite Works Ltd;travel;3.58
+2025-02-26;Delta Facilities;rent;35.36
+2025-03-17;Larkspur Media;telecom;96.38
+2025-07-05;Northwind Supplies;travel;1049.31
+2025-03-05;Atlas Freight;training;103.50
+2025-11-17;Delta Facilities;rent;51.65
+2025-06-03;Larkspur Media;training;691.27
+2025-07-17;Pinemark Services;repairs;710.89
+2025-12-02;Beacon Print Co;telecom;997.67
+2025-07-15;Pinemark Services;logistics;304.28
+2025-04-30;Kestrel Software;training;172.58
+2025-02-12;Harbor Logistics;logistics;167.39
+2025-05-18;Pinemark Services;telecom;21.63
+2025-06-02;Beacon Print Co;logistics;686.54
+2025-07-03;Delta Facilities;rent;241.14
+2025-10-27;Delta Facilities;advertising;1556.42
+2025-02-27;Larkspur Media;training;38.44
+2025-06-18;Atlas Freight;advertising;1236.58
+2025-02-03;Northwind Supplies;training;11.47
+2025-09-06;Harbor Logistics;logistics;793.34
+2025-06-06;Kestrel Software;travel;2626.08
+2025-04-02;Northwind Supplies;repairs;14270.33
+2025-07-25;Copperfield Repairs;logistics;63.15
+2025-05-14;Beacon Print Co;stationery;66.74
+2025-06-13;Atlas Freight;repairs;103.89
+2025-08-05;Pinemark Services;software;279.08
+2025-05-23;Atlas Freight;rent;37.60
+2025-01-14;Larkspur Media;travel;74.16
+2025-12-15;Delta Facilities;advertising;73.99
+2025-07-25;Copperfield Repairs;stationery;110.52
+2025-10-28;Larkspur Media;logistics;8443.10
+2025-05-24;Pinemark Services;telecom;5366.60
+2025-02-07;Kestrel Software;repairs;55.12
+2025-05-01;Delta Facilities;stationery;3333.44
+2025-07-18;Harbor Logistics;software;6537.73
+2025-06-01;Kestrel Software;rent;46.10
+2025-03-29;Harbor Logistics;stationery;33502.18
+2025-08-30;Granite Works Ltd;stationery;7583.65
+2025-01-15;Larkspur Media;rent;24.06
+2025-08-28;Kestrel Software;stationery;4557.27
+2025-04-16;Pinemark Services;rent;995.03
+2025-01-06;Larkspur Media;stationery;5227.16
+2025-09-02;Atlas Freight;travel;4572.83
+2025-09-25;Granite Works Ltd;rent;179.64
+2025-10-29;Granite Works Ltd;rent;9.49
+2025-07-13;Delta Facilities;advertising;166.86
+2025-04-30;Copperfield Repairs;stationery;33.93
+2025-03-27;Northwind Supplies;telecom;632.69
+2025-07-20;Granite Works Ltd;travel;1135.42
+2025-02-28;Delta Facilities;stationery;28.64
+2025-11-16;Harbor Logistics;travel;9.61
+2025-02-19;Larkspur Media;rent;32.57
+2025-12-27;Northwind Supplies;training;13.54
+2025-04-01;Atlas Freight;rent;1.95
+2025-10-15;Kestrel Software;telecom;1379.84
+2025-02-18;Delta Facilities;rent;3167.39
+2025-08-11;Granite Works Ltd;rent;1062.17
+2025-09-30;Granite Works Ltd;stationery;12.36
+2025-11-11;Pinemark Services;advertising;219.52
+2025-01-24;Larkspur Media;rent;19.59
+2025-01-25;Northwind Supplies;travel;2461.93
+2025-09-29;Beacon Print Co;repairs;339.44
+2025-05-19;Pinemark Services;logistics;4178.78
+2025-04-11;Copperfield Repairs;repairs;62.74
+2025-03-17;Northwind Supplies;training;23437.30
+2025-06-29;Larkspur Media;logistics;41.09
+2025-11-01;Pinemark Services;stationery;694.89
+2025-04-08;Pinemark Services;software;21.16
+2025-08-24;Kestrel Software;rent;213.53
+2025-09-23;Atlas Freight;logistics;56.49
+2025-07-08;Harbor Logistics;stationery;1318.07
+2025-05-17;Delta Facilities;travel;4.24
+2025-01-04;Atlas Freight;logistics;1015.59
+2025-09-13;Kestrel Software;training;15661.56
+2025-04-22;Delta Facilities;advertising;2974.87
+2025-09-12;Copperfield Repairs;training;7.85
+2025-07-26;Northwind Supplies;logistics;235.89
+2025-07-29;Granite Works Ltd;software;132.65
+2025-08-20;Larkspur Media;telecom;230.89
+2025-02-06;Atlas Freight;telecom;343.71
+2025-09-05;Copperfield Repairs;software;78.53
+2025-01-29;Larkspur Media;software;127.24
+2025-04-27;Harbor Logistics;telecom;2513.64
+2025-10-11;Copperfield Repairs;travel;3711.02
+2025-12-11;Delta Facilities;logistics;1147.39
+2025-11-02;Pinemark Services;advertising;16968.23
+2025-04-05;Copperfield Repairs;training;387.79
+2025-02-27;Copperfield Repairs;training;861.87
+2025-01-06;Delta Facilities;repairs;59.39
+2025-04-21;Harbor Logistics;logistics;152.70
+2025-03-26;Atlas Freight;stationery;180.49
+2025-01-13;Pinemark Services;telecom;1548.95
+2025-09-14;Beacon Print Co;advertising;3572.50
+2025-02-03;Pinemark Services;travel;240.21
+2025-02-14;Northwind Supplies;logistics;645.60
+2025-05-18;Northwind Supplies;advertising;18124.34
+2025-09-09;Harbor Logistics;stationery;704.68
+2025-02-07;Pinemark Services;advertising;311.83
+2025-03-09;Northwind Supplies;software;4468.66
+2025-11-22;Harbor Logistics;training;158.44
+2025-03-01;Granite Works Ltd;advertising;42450.04
+2025-02-17;Delta Facilities;stationery;532.91
+2025-07-04;Copperfield Repairs;rent;5.06
+2025-05-25;Atlas Freight;advertising;41.95
+2025-08-26;Larkspur Media;logistics;300.06
+2025-08-02;Kestrel Software;advertising;18.19
+2025-01-30;Pinemark Services;rent;35.74
+2025-03-15;Delta Facilities;telecom;781.85
+2025-11-05;Delta Facilities;travel;3032.71
+2025-11-08;Harbor Logistics;stationery;8878.32
+2025-01-29;Atlas Freight;telecom;264914.27
+2025-05-16;Copperfield Repairs;repairs;208.39
+2025-02-25;Northwind Supplies;stationery;45.01
+2025-10-26;Northwind Supplies;training;4938.93
+2025-10-15;Delta Facilities;stationery;20.68
+2025-07-21;Beacon Print Co;advertising;22.16
+2025-04-16;Kestrel Software;logistics;5352.05
+2025-10-14;Delta Facilities;rent;249532.51
+2025-09-04;Copperfield Repairs;stationery;226.83
+2025-10-17;Copperfield Repairs;rent;0.96
+2025-03-18;Atlas Freight;stationery;33.59
+2025-04-06;Copperfield Repairs;logistics;156.80
+2025-05-25;Harbor Logistics;rent;228.65
+2025-02-06;Larkspur Media;repairs;36.46
+2025-01-14;Pinemark Services;stationery;193.16
+2025-07-07;Atlas Freight;logistics;152.86
+2025-07-05;Copperfield Repairs;logistics;4369.31
+2025-07-10;Delta Facilities;travel;93636.08
+2025-01-27;Larkspur Media;stationery;629.91
+2025-10-17;Kestrel Software;rent;485.60
+2025-01-02;Pinemark Services;advertising;114.01
+2025-11-09;Northwind Supplies;repairs;398.72
+2025-07-03;Beacon Print Co;training;2272.51
+2025-03-13;Copperfield Repairs;rent;17196.78
+2025-05-10;Granite Works Ltd;repairs;375.52
+2025-07-02;Beacon Print Co;logistics;176.14
+2025-12-02;Atlas Freight;telecom;6.37
+2025-11-27;Granite Works Ltd;repairs;4.52
+2025-10-26;Delta Facilities;software;50.13
+2025-03-15;Pinemark Services;advertising;1200.27
+2025-08-10;Atlas Freight;rent;72.88
+2025-06-06;Pinemark Services;advertising;19310.93
+2025-09-07;Copperfield Repairs;stationery;51.07
+2025-08-31;Pinemark Services;repairs;186.47
+2025-06-13;Copperfield Repairs;software;875.30
+2025-08-03;Beacon Print Co;telecom;151.10
+2025-04-17;Kestrel Software;stationery;214.32
+2025-03-17;Harbor Logistics;travel;7288.43
+2025-05-21;Copperfield Repairs;advertising;61.98
+2025-01-03;Pinemark Services;travel;17.47
+2025-12-08;Harbor Logistics;stationery;2960.14
+2025-04-17;Pinemark Services;logistics;97.07
+2025-09-11;Kestrel Software;training;238.97
+2025-01-09;Beacon Print Co;telecom;4558.58
+2025-07-23;Larkspur Media;training;14560.83
+2025-09-18;Harbor Logistics;repairs;809.53
+2025-11-26;Beacon Print Co;travel;12.73
+2025-04-06;Harbor Logistics;repairs;243.02
+2025-05-25;Granite Works Ltd;logistics;116.98
+2025-08-21;Northwind Supplies;rent;1086.96
+2025-12-21;Pinemark Services;repairs;193.82
+2025-03-07;Beacon Print Co;repairs;63.39
+2025-12-12;Larkspur Media;software;931.56
+2025-09-06;Atlas Freight;training;74406.06
+2025-03-29;Beacon Print Co;telecom;31.77
+2025-02-25;Copperfield Repairs;telecom;3.49
+2025-04-07;Northwind Supplies;advertising;140.59
+2025-10-01;Harbor Logistics;training;174.87
+2025-02-12;Kestrel Software;software;226.24
+2025-05-24;Northwind Supplies;rent;235.89
+2025-10-12;Harbor Logistics;training;1532.94
+2025-05-18;Northwind Supplies;training;8.30
+2025-12-08;Larkspur Media;repairs;125.06
+2025-05-24;Delta Facilities;travel;78.09
+2025-03-13;Delta Facilities;software;23.74
+2025-04-05;Copperfield Repairs;telecom;66.13
+2025-05-25;Northwind Supplies;stationery;990.36
+2025-03-23;Atlas Freight;repairs;65.10
+2025-04-23;Copperfield Repairs;software;301.47
+2025-07-05;Pinemark Services;logistics;75.47
+2025-03-07;Copperfield Repairs;training;380.31
+2025-09-03;Granite Works Ltd;training;77.60
+2025-09-25;Harbor Logistics;software;120.61
+2025-04-13;Beacon Print Co;advertising;15912.04
+2025-11-18;Northwind Supplies;advertising;6787.54
+2025-10-01;Kestrel Software;logistics;3.29
+2025-06-27;Granite Works Ltd;software;8577.57
+2025-05-08;Beacon Print Co;travel;572.00
+2025-10-23;Granite Works Ltd;rent;58914.33
+2025-03-22;Larkspur Media;advertising;1768.08
+2025-02-25;Pinemark Services;software;5946.96
+2025-12-18;Atlas Freight;telecom;31.50
+2025-10-10;Kestrel Software;logistics;1933.34
+2025-08-03;Harbor Logistics;repairs;8.24
+2025-11-27;Delta Facilities;logistics;5543.42
+2025-03-13;Delta Facilities;telecom;11.47
+2025-06-05;Atlas Freight;telecom;40.03
+2025-06-24;Harbor Logistics;software;145.65
+2025-04-08;Atlas Freight;training;690.83
+2025-01-12;Atlas Freight;repairs;68.23
+2025-07-23;Copperfield Repairs;logistics;1217.75
+2025-06-28;Pinemark Services;software;2075.26
+2025-05-11;Pinemark Services;repairs;128.11
+2025-05-14;Harbor Logistics;logistics;2.02
+2025-05-27;Delta Facilities;advertising;18.22
+2025-01-19;Granite Works Ltd;repairs;7373.32
+2025-04-20;Kestrel Software;rent;15.80
+2025-12-19;Copperfield Repairs;software;104.15
+2025-12-23;Copperfield Repairs;software;134.88
+2025-11-05;Granite Works Ltd;telecom;967.50
+2025-08-21;Kestrel Software;repairs;324.90
+2025-08-11;Kestrel Software;travel;183.03
+2025-05-09;Kestrel Software;stationery;157.59
+2025-10-15;Beacon Print Co;advertising;65512.17
+2025-11-21;Granite Works Ltd;rent;1575.23
+2025-05-19;Harbor Logistics;software;3655.84
+2025-06-10;Larkspur Media;software;6842.68
+2025-02-18;Harbor Logistics;logistics;771.12
+2025-07-04;Northwind Supplies;training;298.86
+2025-02-22;Pinemark Services;repairs;1168.49
+2025-10-03;Larkspur Media;advertising;55.60
+2025-04-14;Delta Facilities;training;6.68
+2025-07-22;Kestrel Software;software;470.65
+2025-08-29;Harbor Logistics;repairs;11505.27
+2025-04-03;Copperfield Repairs;telecom;3880.83
+2025-05-08;Granite Works Ltd;stationery;1930.48
+2025-04-16;Northwind Supplies;logistics;121.89
+2025-02-07;Pinemark Services;software;285.69
+2025-01-01;Kestrel Software;training;37.35
+2025-10-03;Copperfield Repairs;rent;27290.61
+2025-10-19;Beacon Print Co;logistics;132.78
+2025-10-09;Atlas Freight;repairs;10581.18
+2025-01-11;Granite Works Ltd;software;74.28
+2025-06-05;Northwind Supplies;logistics;2863.66
+2025-08-30;Harbor Logistics;training;1335.76
+2025-04-17;Northwind Supplies;training;7.15
+2025-08-26;Copperfield Repairs;rent;678.73
+2025-12-11;Copperfield Repairs;advertising;10833.12
+2025-10-28;Delta Facilities;logistics;6344.99
+2025-03-24;Copperfield Repairs;logistics;27.67
+2025-09-16;Granite Works Ltd;software;3009.85
+2025-07-31;Granite Works Ltd;stationery;9722.66
+2025-07-12;Delta Facilities;advertising;1296.80
+2025-12-03;Kestrel Software;telecom;16267.70
+2025-05-04;Pinemark Services;software;36.64
+2025-10-01;Atlas Freight;repairs;1484.86
+2025-02-13;Beacon Print Co;rent;111.76
+2025-01-17;Larkspur Media;rent;2210.05
+2025-02-09;Northwind Supplies;rent;101.62
+2025-09-27;Pinemark Services;stationery;3436.02
+2025-04-19;Northwind Supplies;stationery;180.35
+2025-04-15;Copperfield Repairs;rent;34288.03
+2025-11-28;Harbor Logistics;travel;742.37
+2025-11-18;Kestrel Software;repairs;371.14
+2025-03-27;Kestrel Software;travel;20.84
+2025-12-21;Northwind Supplies;telecom;41.68
+2025-06-20;Kestrel Software;software;761.66
+2025-03-21;Harbor Logistics;repairs;413.56
+2025-06-14;Beacon Print Co;rent;15828.48
+2025-01-06;Kestrel Software;stationery;43.15
+2025-09-23;Harbor Logistics;telecom;327.33
+2025-02-11;Delta Facilities;software;438.48
+2025-08-02;Atlas Freight;travel;36497.56
+2025-12-03;Copperfield Repairs;software;40.81
+2025-12-16;Copperfield Repairs;software;2.72
+2025-09-25;Larkspur Media;telecom;1375.96
+2025-11-01;Northwind Supplies;software;8.56
+2025-09-05;Granite Works Ltd;logistics;623.71
+2025-07-27;Delta Facilities;telecom;393.07
+2025-08-11;Atlas Freight;repairs;5234.25
+2025-03-06;Northwind Supplies;travel;26.31
+2025-10-02;Northwind Supplies;advertising;23.17
+2025-03-07;Delta Facilities;travel;16326.59
+2025-02-05;Larkspur Media;travel;144.65
+2025-09-16;Granite Works Ltd;training;477.29
+2025-10-12;Beacon Print Co;logistics;3251.32
+2025-09-14;Beacon Print Co;stationery;1334.45
+2025-07-19;Kestrel Software;stationery;530.68
+2025-02-07;Harbor Logistics;telecom;3493.17
+2025-12-30;Copperfield Repairs;repairs;1031.14
+2025-09-30;Beacon Print Co;software;255.10
+2025-10-13;Kestrel Software;logistics;67.18
+2025-08-05;Atlas Freight;rent;517.41
+2025-11-12;Copperfield Repairs;stationery;1485.17
+2025-10-10;Pinemark Services;rent;205.98
+2025-03-02;Atlas Freight;stationery;1164.82
+2025-10-13;Granite Works Ltd;repairs;5.31
+2025-09-11;Delta Facilities;rent;37.44
+2025-08-24;Delta Facilities;logistics;9.79
+2025-03-10;Delta Facilities;logistics;7072.59
+2025-02-13;Pinemark Services;software;184833.77
+2025-05-07;Copperfield Repairs;logistics;14.55
+2025-05-12;Granite Works Ltd;telecom;37.99
+2025-02-25;Northwind Supplies;stationery;419.96
+2025-05-16;Larkspur Media;repairs;601.98
+2025-06-28;Beacon Print Co;logistics;6259.04
+2025-05-14;Atlas Freight;telecom;4.95
+2025-12-20;Pinemark Services;software;259.96
+2025-03-12;Pinemark Services;telecom;2160.36
+2025-12-02;Beacon Print Co;stationery;246.68
+2025-06-16;Harbor Logistics;repairs;15.87
+2025-06-13;Larkspur Media;telecom;68.62
+2025-04-01;Beacon Print Co;training;154.30
+2025-05-24;Northwind Supplies;telecom;5092.63
+2025-10-09;Copperfield Repairs;rent;2.36
+2025-06-26;Copperfield Repairs;software;3.97
+2025-06-02;Granite Works Ltd;stationery;2741.29
+2025-10-10;Atlas Freight;advertising;25.19
+2025-01-26;Northwind Supplies;logistics;3538.23
+2025-02-20;Kestrel Software;logistics;92.15
+2025-05-04;Copperfield Repairs;travel;90.26
+2025-01-15;Beacon Print Co;travel;247.17
+2025-09-10;Northwind Supplies;repairs;1613.74
