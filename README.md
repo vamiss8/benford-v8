@@ -21,7 +21,7 @@ python benford.py --demo
 ## The trick
 
 In numbers that come from the real world the leading digit is not uniform. A
-one turns up about 30.1% of the time, a nine only 4.6%:
+one turns up about 30% of the time, a nine only 4.6%:
 
 ```
 P(leading digit = d) = log10(1 + 1/d)
