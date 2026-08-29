@@ -25,9 +25,7 @@ from dataclasses import dataclass, field
 
 __version__ = "1.0.0"
 
-# --------------------------------------------------------------------------
 # Windows console: UTF-8 output and ANSI colors
-# --------------------------------------------------------------------------
 
 def _prepare_console() -> None:
     if os.name == "nt":
