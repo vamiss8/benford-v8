@@ -20,6 +20,8 @@ import os
 import random
 import re
 import sys
+import xml.etree.ElementTree as ET
+import zipfile
 from collections import Counter
 from dataclasses import dataclass, field
 
@@ -226,15 +228,14 @@ def _numeric_share(cells: list[str]) -> float:
     return parsed / len(filled)
 
 
-def series_from_csv(path: str, wanted: str | None, min_share: float = 0.8) -> list[Series]:
-    with open(path, newline="", encoding="utf-8-sig", errors="replace") as fh:
-        sample = fh.read(8192)
-        fh.seek(0)
-        try:
-            dialect = csv.Sniffer().sniff(sample, delimiters=",;\t|")
-        except csv.Error:
-            dialect = csv.excel
-        rows = list(csv.reader(fh, dialect))
+def series_from_rows(rows: list[list[str]], wanted: str | None,
+                     min_share: float = 0.8, prefix: str = "") -> list[Series]:
+    """Turns a rectangle of cells into one series per numeric column.
+
+    Shared by every table source, so a spreadsheet and a CSV pick their
+    columns by exactly the same rule.
+    """
+    rows = [r for r in rows if any(str(c).strip() for c in r)]
     if not rows:
         return []
 
@@ -250,7 +251,7 @@ def series_from_csv(path: str, wanted: str | None, min_share: float = 0.8) -> li
         cells = [r[index] for r in body if index < len(r)]
         if not cells:
             continue
-        title = (name or f"column {index + 1}").strip()
+        title = (str(name).strip() or f"column {index + 1}")
         if wanted is not None:
             if title.lower() != wanted.lower() and str(index + 1) != wanted:
                 continue
@@ -258,7 +259,191 @@ def series_from_csv(path: str, wanted: str | None, min_share: float = 0.8) -> li
             continue
         values = [v for v in (parse_number(c) for c in cells) if v is not None]
         if values:
-            found.append(Series(title, values))
+            found.append(Series(prefix + title, values))
+    return found
+
+
+def series_from_csv(path: str, wanted: str | None, min_share: float = 0.8) -> list[Series]:
+    with open(path, newline="", encoding="utf-8-sig", errors="replace") as fh:
+        sample = fh.read(8192)
+        fh.seek(0)
+        try:
+            dialect = csv.Sniffer().sniff(sample, delimiters=",;\t|")
+        except csv.Error:
+            dialect = csv.excel
+        rows = list(csv.reader(fh, dialect))
+    return series_from_rows(rows, wanted, min_share)
+
+
+# --------------------------------------------------------------------------
+# Spreadsheets
+#
+# An .xlsx file is a zip of XML, so the standard library is enough to read
+# one and the tool stays dependency free.
+# --------------------------------------------------------------------------
+
+SHEET_NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+REL_NS = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
+
+# Built-in number formats that mean a date or a time. Excel stores those as
+# plain numbers, and dates are exactly what Benford's law must never see.
+DATE_FORMAT_IDS = set(range(14, 23)) | set(range(27, 37)) | set(range(45, 48)) \
+    | set(range(50, 59))
+
+_FORMAT_NOISE = re.compile(r'\[[^\]]*\]|"[^"]*"|\\.')
+CELL_LETTERS = re.compile(r"([A-Za-z]+)")
+
+
+class SpreadsheetError(Exception):
+    """The file claims to be a workbook but cannot be read as one."""
+
+
+def _is_date_format(code: str) -> bool:
+    """A format code is a date if anything is left of y/m/d/h/s once the
+    colours, literals and escapes are stripped out."""
+    return any(ch in "ymdhs" for ch in _FORMAT_NOISE.sub("", code).lower())
+
+
+def _date_style_indexes(archive: zipfile.ZipFile) -> set[int]:
+    """Which style slots format their number as a date."""
+    try:
+        root = ET.fromstring(archive.read("xl/styles.xml"))
+    except (KeyError, ET.ParseError):
+        return set()
+    custom = {}
+    for entry in root.iter(f"{SHEET_NS}numFmt"):
+        try:
+            custom[int(entry.get("numFmtId", -1))] = entry.get("formatCode", "")
+        except ValueError:
+            continue
+    formats = root.find(f"{SHEET_NS}cellXfs")
+    if formats is None:
+        return set()
+    dated = set()
+    for index, style in enumerate(formats):
+        try:
+            format_id = int(style.get("numFmtId", 0))
+        except ValueError:
+            continue
+        if format_id in DATE_FORMAT_IDS or _is_date_format(custom.get(format_id, "")):
+            dated.add(index)
+    return dated
+
+
+def _shared_strings(archive: zipfile.ZipFile) -> list[str]:
+    try:
+        root = ET.fromstring(archive.read("xl/sharedStrings.xml"))
+    except (KeyError, ET.ParseError):
+        return []
+    # A string can be split into runs, so gather every <t> under the entry.
+    return ["".join(node.text or "" for node in item.iter(f"{SHEET_NS}t"))
+            for item in root.iter(f"{SHEET_NS}si")]
+
+
+def _worksheets(archive: zipfile.ZipFile) -> list[tuple[str, str]]:
+    """Sheet names in workbook order, paired with their path inside the zip."""
+    names = set(archive.namelist())
+    try:
+        book = ET.fromstring(archive.read("xl/workbook.xml"))
+    except (KeyError, ET.ParseError):
+        book = None
+
+    targets = {}
+    try:
+        rels = ET.fromstring(archive.read("xl/_rels/workbook.xml.rels"))
+        for rel in rels:
+            targets[rel.get("Id")] = rel.get("Target", "")
+    except (KeyError, ET.ParseError):
+        pass
+
+    found: list[tuple[str, str]] = []
+    if book is not None:
+        for sheet in book.iter(f"{SHEET_NS}sheet"):
+            target = targets.get(sheet.get(f"{REL_NS}id"), "")
+            path = target.lstrip("/")
+            if path and not path.startswith("xl/"):
+                path = "xl/" + path
+            if path in names:
+                found.append((sheet.get("name") or "sheet", path))
+    if found:
+        return found
+    # No workbook part, or relationships we could not follow: take the sheets
+    # as they lie in the archive.
+    return [(os.path.splitext(os.path.basename(p))[0], p)
+            for p in sorted(names) if p.startswith("xl/worksheets/sheet")
+            and p.endswith(".xml")]
+
+
+def _column_index(ref: str | None) -> int | None:
+    """'BC12' -> 54. Cells may be missing, so the position is what places them."""
+    match = CELL_LETTERS.match(ref or "")
+    if not match:
+        return None
+    index = 0
+    for letter in match.group(1).upper():
+        index = index * 26 + (ord(letter) - 64)
+    return index - 1
+
+
+def _sheet_rows(archive: zipfile.ZipFile, path: str, strings: list[str],
+                date_styles: set[int]):
+    """Streams a worksheet row by row, so a big export never lands in memory
+    all at once."""
+    with archive.open(path) as handle:
+        for _, element in ET.iterparse(handle, ("end",)):
+            if element.tag != f"{SHEET_NS}row":
+                continue
+            cells: dict[int, str] = {}
+            for cell in element:
+                index = _column_index(cell.get("r"))
+                if index is None:
+                    continue
+                kind = cell.get("t")
+                if kind == "s":
+                    node = cell.find(f"{SHEET_NS}v")
+                    try:
+                        text = strings[int(node.text)] if node is not None else ""
+                    except (ValueError, IndexError):
+                        text = ""
+                elif kind == "inlineStr":
+                    text = "".join(n.text or "" for n in cell.iter(f"{SHEET_NS}t"))
+                elif kind == "b":
+                    text = ""                      # TRUE/FALSE is not a measurement
+                else:
+                    node = cell.find(f"{SHEET_NS}v")
+                    text = (node.text or "") if node is not None else ""
+                    try:
+                        if int(cell.get("s", -1)) in date_styles:
+                            text = ""              # a date serial, not an amount
+                    except ValueError:
+                        pass
+                if text:
+                    cells[index] = text
+            yield [cells.get(i, "") for i in range(max(cells) + 1)] if cells else []
+            element.clear()
+
+
+def series_from_xlsx(path: str, wanted: str | None, sheet: str | None = None,
+                     min_share: float = 0.8) -> list[Series]:
+    try:
+        archive = zipfile.ZipFile(path)
+    except (zipfile.BadZipFile, OSError) as exc:
+        raise SpreadsheetError(f"not a readable workbook: {exc}") from exc
+
+    with archive:
+        sheets = _worksheets(archive)
+        if sheet is not None:
+            sheets = [(name, p) for name, p in sheets if name.lower() == sheet.lower()]
+            if not sheets:
+                raise SpreadsheetError(f"no sheet named '{sheet}'")
+        strings = _shared_strings(archive)
+        date_styles = _date_style_indexes(archive)
+
+        found: list[Series] = []
+        for name, sheet_path in sheets:
+            rows = list(_sheet_rows(archive, sheet_path, strings, date_styles))
+            prefix = "" if len(sheets) == 1 else f"{name}!"
+            found.extend(series_from_rows(rows, wanted, min_share, prefix))
     return found
 
 
@@ -295,10 +480,13 @@ def series_from_json(text: str, name: str) -> list[Series]:
     return [Series(name, found)] if found else []
 
 
-def load_series(path: str, column: str | None) -> list[Series]:
+def load_series(path: str, column: str | None,
+                sheet: str | None = None) -> list[Series]:
     if path == "-":
         return series_from_text(sys.stdin.read(), "stdin")
     lower = path.lower()
+    if lower.endswith((".xlsx", ".xlsm")):
+        return series_from_xlsx(path, column, sheet)
     if lower.endswith((".csv", ".tsv")):
         return series_from_csv(path, column)
     with open(path, encoding="utf-8-sig", errors="replace") as fh:
@@ -430,8 +618,17 @@ def analyze(series: Series, limit: float | None = None) -> dict:
     }
 
 
+# Under this many values the law is drowned out by ordinary chance, so
+# scoring the deviation would only manufacture false alarms.
+MIN_SAMPLE = 100
+
+
 def risk_score(result: dict) -> tuple[int, list[str]]:
     """0..100. A reason to look closer, not a verdict."""
+    if result["n_used"] < MIN_SAMPLE:
+        return 0, [f"sample too small to score: {result['n_used']} values, "
+                   f"{MIN_SAMPLE} needed"]
+
     score, flags = 0, []
 
     first = result["first"]
@@ -539,9 +736,9 @@ def print_report(result: dict, *, show_second: bool, show_last2: bool) -> None:
     print(C.p("=" * 78, C.BLUE))
     print()
 
-    if result["n_used"] < 30:
-        print(C.p("  Too little data: Benford's law needs roughly 100 numbers "
-                  "before it means anything.", C.YELLOW))
+    if result["n_used"] < MIN_SAMPLE:
+        print(C.p(f"  Too little data: Benford's law needs about {MIN_SAMPLE} "
+                  "numbers before it means anything.", C.YELLOW))
         print()
 
     if result["first"]:
@@ -775,13 +972,17 @@ def build_parser() -> argparse.ArgumentParser:
         epilog="""examples:
   python benford.py samples/invoices_honest.csv
   python benford.py samples/invoices_cooked.csv --limit 5000 --second --last2
+  python benford.py ledger.xlsx --sheet Q3 --column amount
   python benford.py report.csv --column amount --json
   cat numbers.txt | python benford.py -
   python benford.py --demo
   python benford.py --why""")
     parser.add_argument("files", nargs="*",
-                        help="CSV / JSON / plain text, or - for stdin")
-    parser.add_argument("-c", "--column", help="CSV column, by name or by number")
+                        help="xlsx / CSV / JSON / plain text, or - for stdin")
+    parser.add_argument("-c", "--column",
+                        help="table column, by name or by number")
+    parser.add_argument("-s", "--sheet",
+                        help="worksheet to read, by name (xlsx only)")
     parser.add_argument("-l", "--limit", type=float,
                         help="approval limit: look for amounts piling up below it")
     parser.add_argument("-2", "--second", action="store_true",
@@ -840,8 +1041,8 @@ def main(argv: list[str] | None = None) -> int:
             print(C.p(f"no such file: {path}", C.RED), file=sys.stderr)
             return 2
         try:
-            found = load_series(path, args.column)
-        except OSError as exc:
+            found = load_series(path, args.column, args.sheet)
+        except (OSError, SpreadsheetError) as exc:
             print(C.p(f"could not read {path}: {exc}", C.RED), file=sys.stderr)
             return 2
         if not found:

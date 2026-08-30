@@ -11,6 +11,7 @@ import os
 import random
 import tempfile
 import unittest
+import zipfile
 
 import benford as b
 
@@ -169,6 +170,152 @@ class TestLoaders(unittest.TestCase):
     def test_text_extraction(self):
         series = b.series_from_text("total 1 234,50 plus another 99 cents", "t")
         self.assertEqual(series[0].values, [1234.50, 99.0])
+
+
+def build_workbook(path: str, amounts: list[float]) -> str:
+    """Writes a workbook the way Excel writes one: shared strings, dates kept
+    as plain serial numbers, and a style table saying which is which."""
+    main = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+    rel = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+    pkg = "http://schemas.openxmlformats.org/package/2006/relationships"
+
+    strings = ["date", "vendor", "amount", "Northwind Supplies"]
+    # style 0 general, 1 custom date, 2 two decimals, 3 built-in date id 14
+    styles = (f'<styleSheet xmlns="{main}">'
+              '<numFmts count="1">'
+              '<numFmt numFmtId="164" formatCode="dd/mm/yyyy"/></numFmts>'
+              '<cellXfs count="4">'
+              '<xf numFmtId="0"/><xf numFmtId="164"/>'
+              '<xf numFmtId="2"/><xf numFmtId="14"/>'
+              '</cellXfs></styleSheet>')
+
+    rows = ['<row r="1">'
+            '<c r="A1" t="s"><v>0</v></c>'
+            '<c r="B1" t="s"><v>1</v></c>'
+            '<c r="C1" t="s"><v>2</v></c>'
+            '<c r="D1" t="s"><v>0</v></c>'
+            '</row>']
+    for i, amount in enumerate(amounts, start=2):
+        rows.append(f'<row r="{i}">'
+                    f'<c r="A{i}" s="1"><v>{45000 + i}</v></c>'
+                    f'<c r="B{i}" t="s"><v>3</v></c>'
+                    f'<c r="C{i}" s="2"><v>{amount}</v></c>'
+                    f'<c r="D{i}" s="3"><v>{45300 + i}</v></c>'
+                    '</row>')
+    sheet1 = (f'<worksheet xmlns="{main}"><sheetData>'
+              + "".join(rows) + '</sheetData></worksheet>')
+    # inline string, a boolean, and a gap where column B should be
+    sheet2 = (f'<worksheet xmlns="{main}"><sheetData>'
+              '<row r="1"><c r="A1" t="inlineStr"><is><t>note</t></is></c>'
+              '<c r="C1" t="s"><v>2</v></c></row>'
+              '<row r="2"><c r="A2" t="b"><v>1</v></c><c r="C2"><v>17</v></c></row>'
+              '</sheetData></worksheet>')
+
+    with zipfile.ZipFile(path, "w") as archive:
+        archive.writestr("_rels/.rels",
+                         f'<Relationships xmlns="{pkg}"><Relationship Id="rId1" '
+                         f'Type="{rel}/officeDocument" Target="xl/workbook.xml"/>'
+                         '</Relationships>')
+        archive.writestr("xl/workbook.xml",
+                         f'<workbook xmlns="{main}" xmlns:r="{rel}"><sheets>'
+                         '<sheet name="Q3 ledger" sheetId="1" r:id="rId1"/>'
+                         '<sheet name="Notes" sheetId="2" r:id="rId2"/>'
+                         '</sheets></workbook>')
+        archive.writestr("xl/_rels/workbook.xml.rels",
+                         f'<Relationships xmlns="{pkg}">'
+                         f'<Relationship Id="rId1" Type="{rel}/worksheet" '
+                         'Target="worksheets/sheet1.xml"/>'
+                         f'<Relationship Id="rId2" Type="{rel}/worksheet" '
+                         'Target="worksheets/sheet2.xml"/>'
+                         '</Relationships>')
+        archive.writestr("xl/styles.xml", styles)
+        archive.writestr("xl/sharedStrings.xml",
+                         f'<sst xmlns="{main}">'
+                         + "".join(f"<si><t>{s}</t></si>" for s in strings)
+                         + "</sst>")
+        archive.writestr("xl/worksheets/sheet1.xml", sheet1)
+        archive.writestr("xl/worksheets/sheet2.xml", sheet2)
+    return path
+
+
+class TestSpreadsheet(unittest.TestCase):
+    """An .xlsx is a zip of XML, and the reader has to survive what Excel
+    actually puts in there."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.dir = tempfile.TemporaryDirectory()
+        cls.amounts = [round(v, 2) for v in b.honest_amounts(120, random.Random(5))]
+        cls.book = build_workbook(os.path.join(cls.dir.name, "ledger.xlsx"),
+                                  cls.amounts)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.dir.cleanup()
+
+    def test_dates_are_not_mistaken_for_data(self):
+        """A date in Excel is the number 45000-odd. Reading it as an amount
+        would feed the law exactly the kind of number it cannot handle."""
+        names = [s.name for s in b.series_from_xlsx(self.book, None)]
+        self.assertEqual(names, ["Q3 ledger!amount", "Notes!amount"])
+
+    def test_amounts_survive_the_round_trip(self):
+        series = b.series_from_xlsx(self.book, None, sheet="Q3 ledger")
+        self.assertEqual(series[0].name, "amount")
+        self.assertEqual(series[0].values, self.amounts)
+
+    def test_single_sheet_needs_no_prefix(self):
+        series = b.series_from_xlsx(self.book, None, sheet="Notes")
+        self.assertEqual([s.name for s in series], ["amount"])
+        self.assertEqual(series[0].values, [17.0])
+
+    def test_named_column(self):
+        series = b.series_from_xlsx(self.book, "amount", sheet="Q3 ledger")
+        self.assertEqual(len(series), 1)
+
+    def test_unknown_sheet_is_reported(self):
+        with self.assertRaises(b.SpreadsheetError):
+            b.series_from_xlsx(self.book, None, sheet="nope")
+
+    def test_not_a_workbook_is_reported(self):
+        path = os.path.join(self.dir.name, "fake.xlsx")
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write("this is not a zip")
+        with self.assertRaises(b.SpreadsheetError):
+            b.series_from_xlsx(path, None)
+
+    def test_date_format_detection(self):
+        for code in ("dd/mm/yyyy", "[$-409]h:mm AM/PM", "mmm yy", "d.m.yy"):
+            self.assertTrue(b._is_date_format(code), code)
+        for code in ("General", "0.00", '#,##0.00" EUR"', "0.00%", "[Red]-0.00"):
+            self.assertFalse(b._is_date_format(code), code)
+
+    def test_column_letters(self):
+        self.assertEqual(b._column_index("A1"), 0)
+        self.assertEqual(b._column_index("Z9"), 25)
+        self.assertEqual(b._column_index("AA1"), 26)
+        self.assertEqual(b._column_index("BC12"), 54)
+        self.assertIsNone(b._column_index(None))
+
+    def test_cli_reads_a_workbook(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            code = b.main([self.book, "--sheet", "Q3 ledger", "--no-color"])
+        self.assertEqual(code, 0)
+
+
+class TestSmallSamples(unittest.TestCase):
+    def test_short_series_is_not_scored(self):
+        """Two numbers cannot disagree with the law, so they must not be
+        accused of it."""
+        result = b.analyze(b.Series("tiny", [17.0, 23.0]))
+        score, flags = b.risk_score(result)
+        self.assertEqual(score, 0)
+        self.assertIn("too small", flags[0])
+
+    def test_the_threshold_is_the_documented_one(self):
+        rng = random.Random(11)
+        values = [rng.uniform(100, 9999) for _ in range(b.MIN_SAMPLE)]
+        self.assertGreater(b.risk_score(b.analyze(b.Series("n", values)))[0], 0)
 
 
 class TestCLI(unittest.TestCase):
