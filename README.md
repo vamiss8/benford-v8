@@ -47,11 +47,11 @@ sentence.
 
 ```
 file ──► parse_number() ──► significand() ──► digit tests ──┐
- CSV      "1 234,56 ₽"        "123456"        MAD, chi2     │
- JSON     -> 1234.56                                        ▼
- text                                                  risk score
- stdin                        round numbers ──────────►  0..100
-                              duplicates
+ xlsx     "1 234,56 ₽"        "123456"        MAD, chi2     │
+ CSV      -> 1234.56                                        ▼
+ JSON                                                  risk score
+ text                         round numbers ──────────►  0..100
+ stdin                        duplicates
                               approval limit
 ```
 
@@ -69,6 +69,22 @@ The ambiguous case — a lone comma in `1,234` — turned out not to matter at a
 Read as thousands it is 1234, read as a decimal it is 1.234, and the leading
 digits are `1`, `2` either way. Scale invariance means the tests never see the
 difference, so the rule there is a coin toss that costs nothing.
+
+## Spreadsheets
+
+Accounting does not arrive as CSV, it arrives as `.xlsx`. An xlsx file is a zip
+of XML, so reading one takes `zipfile` and `xml.etree` and the tool stays
+dependency free:
+
+```bash
+python benford.py ledger.xlsx --sheet "Q3 ledger"
+```
+
+Every sheet is read unless `--sheet` names one, and columns are picked by the
+same rule as in a CSV. With more than one sheet in play the series are labelled
+`sheet!column`, so a workbook of twelve monthly tabs reports twelve verdicts
+instead of one blurred average. Worksheets are streamed row by row rather than
+parsed whole, because a year of transactions is a large piece of XML.
 
 ## What the report says
 
@@ -110,7 +126,8 @@ cat numbers.txt | python benford.py -
 
 | Flag | What it does |
 | ---- | ------------ |
-| `-c`, `--column` | CSV column, by name or by number |
+| `-c`, `--column` | table column, by name or by number |
+| `-s`, `--sheet` | worksheet to read, by name (xlsx only) |
 | `-l`, `--limit` | approval limit: look for amounts piling up below it |
 | `-2`, `--second` | add the second-digit test |
 | `--last2` | add the last-two-digits test |
@@ -138,6 +155,21 @@ signal I wanted. The share of amounts with no cents at all is reported next to
 it, because that is where hand-typed figures really give themselves away —
 0.7% honest against 47.8% invented.
 
+**A date in Excel is just the number 45678.** Spreadsheets store dates as a
+count of days, and only the cell's format says so. Read naively, a date column
+sails through the 80% numeric check and gets analysed — and dates are precisely
+the assigned, bounded numbers the law cannot say anything about. So the reader
+walks the style table, works out which slots format their number as a date
+(built-in format ids plus any custom code that still has y/m/d/h/s left in it
+once colours and quoted literals are stripped), and blanks those cells before
+the column ever gets scored.
+
+**Two numbers were being accused of fraud.** A stray column with two values in
+it came back at 57 out of 100, because MAD does not care how thin the sample
+is. The report had always warned about small samples, but the score ignored its
+own warning. Scoring now stops below 100 values and says so in place of a
+verdict — the same hundred the README has been quoting all along.
+
 **The `.12e` format was inventing digits.** Formatting a value to twelve
 decimals pads zeros the number does not have, so a plain `9` appeared to have a
 second digit of `0`. The second-digit test was quietly polluted by every
@@ -157,7 +189,7 @@ flashlight, not a verdict, and the report says so on every run.
 
 ```
 benford.py               the whole tool
-test_benford.py          30 tests, run with: python test_benford.py
+test_benford.py          41 tests, run with: python test_benford.py
 samples/make_samples.py  demo data generator, fixed seed
 samples/invoices_*.csv   two sets of invoices: honest and invented
 ```
@@ -176,8 +208,11 @@ python test_benford.py
 ```
 
 They cover messy-number parsing, the math of the law, p-values against
-published chi-square tables, the CSV/JSON/text loaders, and the one assertion
-that actually matters: honest data must pass and invented data must get caught.
+published chi-square tables, the loaders, and the one assertion that actually
+matters: honest data must pass and invented data must get caught. The
+spreadsheet tests build a workbook from scratch — shared strings, date serials,
+an inline string, a boolean, a gap where a column should be — and read it back,
+so nothing has to be committed as a binary fixture.
 
 ## Roadmap
 
@@ -185,8 +220,8 @@ that actually matters: honest data must pass and invented data must get caught.
 - [x] Round numbers, duplicates, approval-limit clustering
 - [x] CSV / JSON / text loaders with column autodetection
 - [x] Risk score, JSON output, CI-friendly exit codes
+- [x] Reading .xlsx directly, dates and all
 - [ ] Nigrini's summation test
-- [ ] Reading .xlsx directly
 - [ ] A standalone HTML report
 
 ---
@@ -230,11 +265,11 @@ P(первая цифра = d) = log10(1 + 1/d)
 
 ```
 файл ──► parse_number() ──► significand() ──► тесты цифр ──┐
- CSV      "1 234,56 ₽"        "123456"        MAD, chi2    │
- JSON     -> 1234.56                                       ▼
- текст                                                 оценка риска
- stdin                        круглые числа ──────────►   0..100
-                              повторы
+ xlsx     "1 234,56 ₽"        "123456"        MAD, chi2    │
+ CSV      -> 1234.56                                       ▼
+ JSON                                                  оценка риска
+ текст                        круглые числа ──────────►   0..100
+ stdin                        повторы
                               лимит согласования
 ```
 
@@ -251,6 +286,22 @@ P(первая цифра = d) = log10(1 + 1/d)
 Как тысячи это 1234, как дробь это 1.234, и первые цифры в обоих случаях `1`,
 `2`. Из-за масштабной инвариантности тесты этой разницы не видят, так что
 правило там — подбрасывание монетки, которое ничего не стоит.
+
+## Таблицы Excel
+
+Бухгалтерия приходит не в CSV, а в `.xlsx`. Файл xlsx — это zip с XML, так что
+для чтения хватает `zipfile` и `xml.etree`, и инструмент остаётся без
+зависимостей:
+
+```bash
+python benford.py ledger.xlsx --sheet "Q3 ledger"
+```
+
+Читаются все листы, если `--sheet` не назвал конкретный, а колонки отбираются
+тем же правилом, что и в CSV. Когда листов несколько, серии подписываются как
+`лист!колонка`: книга из двенадцати месячных вкладок даст двенадцать вердиктов,
+а не один смазанный средний. Лист разбирается построчно, потоком, — год
+проводок это довольно много XML.
 
 ## Что показывает отчёт
 
@@ -292,7 +343,8 @@ cat numbers.txt | python benford.py -
 
 | Флаг | Зачем |
 | ---- | ----- |
-| `-c`, `--column` | колонка CSV по имени или номеру |
+| `-c`, `--column` | колонка таблицы по имени или номеру |
+| `-s`, `--sheet` | лист книги по имени (только xlsx) |
 | `-l`, `--limit` | лимит согласования: искать скопление сумм под ним |
 | `-2`, `--second` | добавить тест второй цифры |
 | `--last2` | добавить тест последних двух цифр |
@@ -318,6 +370,21 @@ cat numbers.txt | python benford.py -
 10.8%, выдуманные — 32.1%, вот это уже сигнал. Рядом печатается доля сумм вообще
 без копеек, потому что именно там ручные цифры выдают себя: 0.7% против 47.8%.
 
+**Дата в Excel — это просто число 45678.** Таблицы хранят даты как счётчик
+дней, и что это дата, известно только из формата ячейки. Прочитанная в лоб,
+колонка дат спокойно проходит проверку «80% чисел» и уходит в анализ — а даты
+это ровно те назначенные и ограниченные числа, про которые закон ничего сказать
+не может. Поэтому загрузчик проходит по таблице стилей, вычисляет, какие слоты
+форматируют число как дату (встроенные идентификаторы плюс любой пользовательский
+код, в котором после вырезания цветов и литералов в кавычках остались y/m/d/h/s),
+и гасит такие ячейки до того, как колонка попадёт в оценку.
+
+**Два числа обвинялись в мошенничестве.** Случайная колонка из двух значений
+получала 57 баллов из 100: MAD не интересует, насколько тонкая выборка. Отчёт
+про маленькие выборки предупреждал всегда, а вот оценка своё же предупреждение
+игнорировала. Теперь ниже 100 значений оценка не считается и честно сообщает об
+этом — та самая сотня, которую README повторяет с самого начала.
+
 **Формат `.12e` придумывал цифры.** Он дописывает нули, которых в числе нет,
 поэтому у обычной девятки находилась вторая цифра `0`. Тест второй цифры тихо
 загрязнялся каждым однозначным значением выборки. Теперь используется
@@ -337,7 +404,7 @@ cat numbers.txt | python benford.py -
 
 ```
 benford.py               весь инструмент
-test_benford.py          30 тестов, запуск: python test_benford.py
+test_benford.py          41 тест, запуск: python test_benford.py
 samples/make_samples.py  генератор демо-данных, сид зафиксирован
 samples/invoices_*.csv   два набора счетов: честный и выдуманный
 ```
@@ -356,8 +423,11 @@ python test_benford.py
 ```
 
 Проверяют разбор грязных чисел, математику закона, p-value по опубликованным
-таблицам chi-квадрат, загрузчики CSV/JSON/текста и главное утверждение: честные
-данные обязаны проходить, выдуманные — попадаться.
+таблицам chi-квадрат, загрузчики и главное утверждение: честные данные обязаны
+проходить, выдуманные — попадаться. Тесты на таблицы собирают книгу Excel с
+нуля — общие строки, даты-серийники, встроенная строка, булево значение, дырка
+на месте колонки — и читают её обратно, так что никаких бинарных файлов в
+репозитории держать не нужно.
 
 ## Что дальше
 
@@ -365,8 +435,8 @@ python test_benford.py
 - [x] Круглые числа, повторы, скопление под лимитом согласования
 - [x] Загрузчики CSV / JSON / текста с автоопределением колонки
 - [x] Оценка риска, JSON-вывод, коды возврата под CI
+- [x] Чтение .xlsx напрямую, вместе с датами
 - [ ] Тест сумм по Нигрини
-- [ ] Чтение .xlsx напрямую
 - [ ] Отдельный HTML-отчёт
 
 ---
