@@ -32,7 +32,7 @@ P(leading digit = d) = log10(1 + 1/d)
 ```
 
 Take a deposit growing at 10% a year. Going from 1000 to 2000 takes seven
-years; getting from 9000 to 10000 takes one. A number simply spends longer with
+years - getting from 9000 to 10000 takes one. A number simply spends longer with
 a one in front. Everything that grows by multiplication behaves this way:
 prices, city populations, river lengths, electricity bills, file sizes,
 Fibonacci numbers.
